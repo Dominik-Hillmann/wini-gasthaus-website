@@ -1,0 +1,69 @@
+baseURL = 'http://gasthaus-wini.com/'
+languageCode = 'de'
+title = 'Gasthaus Wini'
+theme = 'tella'
+
+[params]
+
+  mainSections = ['blog']
+
+  googleFonts = true
+
+  [params.logo]
+    main = "img/logo/logo.svg"
+    alt = "Tella Logo"
+
+    # The size parameter is the class name of tailwindcss
+    # https://tailwindcss.com/
+    size = "h-14"
+
+  [params.site]
+    name = "Gasthaus Wini"
+
+  [params.icon]
+    #If you want to use FontAwesome, set this parameter to true.
+    fontawesome = true
+
+  [params.homepage_meta_tags]
+    meta_description = "A Hugo Theme for OSSProject, Companies, Organization..."
+    meta_og_title = "Tella"
+    meta_og_type = "website"
+    meta_og_url = "https://tella.pages.dev"
+    meta_og_image = "https://raw.githubusercontent.com/opera7133/tella/master/images/tn.png"
+    meta_og_description = "A Hugo Theme for OSSProject, Companies, Organization..."
+    meta_twitter_card = "summary_large_image"
+    meta_twitter_site = "@username"
+    meta_twitter_creator = "@username"
+
+[menu]
+
+  #
+  [[menu.main]]
+    identifier = "accommodation"
+    name = "Unterkunft"
+    url = "/accommodation/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Kontakt"
+    url = "/contact/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "rules"
+    name = "Hausordnung"
+    url = "/rules/"
+    weight = 3
+
+  # Footer Menu
+  [[menu.footer]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.footer]]
+    name = "Github"
+    url = "https://github.com/opera7133/tella"
+    pre = "<i class='icon-github text-2xl'></i>"
+    weight = 2
