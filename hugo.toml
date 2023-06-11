@@ -53,7 +53,7 @@ theme = 'tella'
   [[menu.main]]
     identifier = "rules"
     name = "Hausordnung"
-    url = "/rules/"
+    url = "/house-rules/"
     weight = 3
 
   # Footer Menu
@@ -61,9 +61,14 @@ theme = 'tella'
     name = "Home"
     url = "/"
     weight = 1
+  
+  [[menu.footer]]
+    name = "Impressum"
+    url = "/imprint"
+    weight = 2
 
   [[menu.footer]]
     name = "Github"
     url = "https://github.com/opera7133/tella"
     pre = "<i class='icon-github text-2xl'></i>"
-    weight = 2
+    weight = 3
