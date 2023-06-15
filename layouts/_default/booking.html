@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    {{- partial "head.html" . -}}
+    <meta name="description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" />
+    <meta property="og:title" content="{{ .Site.Params.homepage_meta_tags.meta_og_title }}" />
+    <meta property="og:type" content="{{ .Site.Params.homepage_meta_tags.meta_og_type }}" />
+    <meta property="og:url" content="{{ .Site.Params.homepage_meta_tags.meta_og_url }}" />
+    <meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image }}" />
+    <meta property="og:description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" />
+    <meta name="twitter:card" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_card }}" />
+    <meta name="twitter:site" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_site }}" />
+    <meta name="twitter:creator" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_creator }}" />
+
+    <link rel="stylesheet" href="css/open-street-maps.css">
+</head>
+
+<body>
+    {{ $response, $err := http.Post "https://example.com/api" "application/json" (bytes.NewBufferString "{\"key\": \"value\"}") }}    {{ if $err }}
+    <p>Error retrieving plain text: {{ $err }}</p>
+    {{ else }}
+    <p>Plain Text: {{ $plainText }}</p>
+    {{ end }}
+    <!-- Use the $json variable to access the JSON data -->
+    {{ end }}
+
+    {{- partial "alert.html" . -}}
+
+    {{- partial "header.html" . -}}
+
+    <div class="scroll-top rounded-full">
+        <span class="icon-keyboard_arrow_up text-2xl"></span>
+    </div>
+
+    <div class="mx-auto my-10 max-w-6xl">
+        <div class="mx-3 col-span-3 lg:col-span-2 px-2">
+            <h1 class="title text-5xl mb-4">{{.Title}}</h1>
+            <div class="content prose md:prose-lg lg:prose-xl max-w-none py-1">{{.Content}}</div>
+            <p>{{ $jsonData }}</p>
+            <form name="contact" action="https://getform.io/" method="POST">
+
+                <label for="start">Start date:</label>
+
+                <div class="input">
+                    <input type="date" id="start" name="start" value="2018-07-22" min="2023-01-01" max="2025-12-31"
+                        class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                        required>
+                </div>
+
+                <div class="input">
+                    <input type="date" id="end" name="end" value="2018-07-22" min="2023-01-01" max="2025-12-31"
+                        class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                        required>
+                </div>
+
+                <div class="input">
+                    <input type="text" placeholder="Name" name="name"
+                        class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                        required>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Email" name="mail"
+                        class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                        required>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Title" name="title"
+                        class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                        required>
+                </div>
+                <div class="input">
+                    <textarea rows="5" cols="30" placeholder="Message" name="message"
+                        class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                        required></textarea>
+                </div>
+                <input type="submit" value="Submit"
+                    class="px-8 py-2 duration-200 bg-gray-800 text-white cursor-pointer transition-colors hover:bg-gray-400">
+            </form>
+        </div>
+    </div>
+
+
+    {{- partial "footer.html" . -}}
+</body>
+
+</html>
