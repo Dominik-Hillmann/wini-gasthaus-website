@@ -53,7 +53,7 @@ theme = 'tella'
   [[menu.main]]
     identifier = "rules"
     name = "Hausordnung"
-    url = "/house-rules/"
+    url = "/rules"
     weight = 3
 
   # Footer Menu
