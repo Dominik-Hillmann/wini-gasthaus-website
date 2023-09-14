@@ -41,7 +41,6 @@ defaultContentLanguageInSubdir = false
 
 [menu]
 
-  #
   [[menu.main]]
     identifier = "booking"
     name = "Buchung"
@@ -103,5 +102,39 @@ defaultContentLanguageInSubdir = false
     languageName = 'English'
     title = 'Gasthaus Wini'
     weight = 2
-    [languages.en.params]
-      subtitle = 'Reference, Tutorials, and Explanations'
+
+      [languages.en.params.logo]
+        alt = "Gasthaus Wini"
+
+      [languages.en.menu]
+        # Header menu
+        [[languages.en.menu.main]]
+          identifier = "booking"
+          name = "Booking"
+          url = "/en/booking/"
+          weight = 1
+        [[languages.en.menu.main]]
+          identifier = "reviews"
+          name = "Reviews"
+          url = "/en/reviews/"
+          weight = 2
+        [[languages.en.menu.main]]
+          identifier = "rules"
+          name = "House Rules"
+          url = "/en/rules/"
+          weight = 3
+        # Footer Menu
+        [[languages.en.menu.footer]]
+          name = "Home"
+          url = "/en/"
+          weight = 1
+
+        [[languages.en.menu.footer]]
+          name = "Deutsche Version"
+          url = "/"
+          weight = 2
+        
+        [[languages.en.menu.footer]]
+          name = "Imprint"
+          url = "/en/imprint/"
+          weight = 3

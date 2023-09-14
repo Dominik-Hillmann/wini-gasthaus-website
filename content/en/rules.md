@@ -1,153 +1,85 @@
-# Hausordnung
+# House Rules
 
-## Küche/Bad
+## Kitchen/Bathroom
 
-Bitte gehen Sie pfleglich mit der Kücheneinrichtung und den technischen Geräten um. 
-Da eine verschmutzte Küche Niemanden erfreut, stellen Sie bitte Geschirr, Töpfe und Besteck nur im 
-sauberen und trockenen Zustand in die Schränke. 
-Stellen Sie heiße Töpfe oder andere heiße Gegenstände bitte nicht ohne Untersetzer auf die Tische 
-oder die Arbeitsplatte. 
-Es sind ausreichend Untersetzer und Platzdeckchen zur Schonung der Oberflächen vorhanden. 
-Benutzen Sie zum Schneiden immer ein Schneidebrett als Unterlage. 
-Hinterlassen Sie den Innenraum von Backofen, Kühlschrank, Geschirrspüler und Mikrowelle im 
-sauberen Zustand.
-Sämtliche Bedienungsanleitungen (auch für den Fernseher) befinden sich im Schrank über der 
-Mikrowelle.
-Zum Duschen bitten wir Sie das an der der Decke angebrachte Duschrollo bis in die Wanne 
-herunterzuziehen, um einer Überschwemmung im Bad vorzubeugen. Um Schimmelbildung und Stockflecken zu 
-vermeiden, bitten wir Sie nach dem Duschen das Rollo ausreichend lange zu trocknen, bevor es wieder 
-hochgezogen wird.
-Außerdem steht Ihnen ein Fön zur Verfügung.
+Please handle the kitchen equipment and technical devices with care. Since a dirty kitchen doesn't please anyone, please put dishes, pots, and cutlery in the cabinets only when they are clean and dry. Please do not place hot pots or other hot objects on tables or countertops without coasters. There are enough coasters and placemats to protect the surfaces. Always use a cutting board when cutting. Leave the interior of the oven, refrigerator, dishwasher, and microwave in a clean state. All operating instructions (including those for the TV) are located in the cabinet above the microwave. 
 
-## Beschädigungen
+For showering, we kindly ask you to pull down the shower curtain hanging from the ceiling into the tub to prevent flooding in the bathroom. To avoid mold and mildew, please ensure the curtain is adequately dried after showering before pulling it back up. Additionally, a hairdryer is available for your use.
 
-Niemand beschädigt absichtlich Sachen. Dennoch kann es vorkommen, dass etwas kaputt geht. Wir würden uns freuen, wenn Sie den entstandenen Schaden sofort mitteilen, und wir diesen nicht erst nach Ihrer Abreise bei der Endreinigung feststellen. So können wir schnell reagieren und den Schaden im Idealfall noch während Ihres Aufenthalts für Ihre Nutzung, aber zumindest rechtzeitig für die nachfolgenden Gäste instand setzen.
-Bitte nehmen Sie hierzu per Mail (gasthaus@wini.com) oder Telefon (finden Sie als Auslage in der Wohnung) mit uns Kontakt auf.
-Als Mieter haften Sie für Beschädigungen in Höhe des Wiederbeschaffungswertes. 
+## Damages
 
-## Lüften
+No one intentionally damages things. However, accidents can happen. We would appreciate it if you could report any damage immediately, rather than waiting until your departure for the final cleaning. This way, we can react quickly and, ideally, repair the damage during your stay for your continued use, or at least in time for the subsequent guests. Please contact us via email (mail@gasthaus-wini.com) or phone (contact details are available in the apartment). As a tenant, you are liable for damages up to the replacement value.
 
-Zur Vermeidung von Schimmelbildung bitten wir Sie, die Räume ausreichend zu lüften, mindestens jedoch 2 x Stoßlüftung pro Tag für 10 Minuten. Aufgrund der kleinen Fenster im Bad  ist hier besondere Sorgfalt erbeten.
+## Ventilation
 
-## Sorgfaltspflicht
+To prevent mold formation, please ensure adequate ventilation of the rooms, at least 2 times per day for 10 minutes. Due to the small windows in the bathroom, special care is required here.
 
-Wir bitten Sie das Mietobjekt pfleglich zu behandeln und dafür Sorge zu tragen, dass auch Mitreisende und Angehörige die Mietbedingungen einhalten. Die Hof- und Eingangstür sollen grundsätzlich geschlossen sein, um mögliche Schäden durch Unwetter oder Einbruch zu vermeiden (incl. Fenster). Mit den Ressourcen Wasser, Strom und Heizung ist schonend umzugehen.
+## Care
 
-## Entsorgung
+We ask you to treat the rental property with care and ensure that fellow travelers and family members also adhere to the rental conditions. The courtyard and entrance door should generally be closed to prevent potential damage from storms or break-ins (including windows). Use water, electricity, and heating resources conservatively.
 
-Es ist vorgeschrieben, den Abfall nach Restmüll, Glas, Papier und Verpackungen mit dem grünen Punkt zu trennen. Entsprechend gekennzeichnete Behältnisse stehen auf der Terrasse zur Verfügung. Leere Gläser und Glasflaschen stellen Sie bitte in die rechte Seite des Mülleimers in der Küche.
-Müll- und Kosmetikeimer bitte nur mit Müllbeutel benutzen, und diese verschlossen in der Restmülltonne entsorgen. Zusätzliche Müllbeutel finden Sie in der Küchenzeile unter der Spüle bzw. im Badschrank.
+## Disposal
 
-In die Küchenspüle, die Toilette, das Waschbecken und die Dusche dürfen keine Abfälle, Essensreste, schädliche Flüssigkeiten oder Ähnliches entsorgt werden! Vermeiden Sie alles, was zu Verstopfungen der Leitungen führen kann. Alle Hygieneartikel müssen im Restmüll entsorgt werden!
+It is mandatory to separate waste into residual waste, glass, paper, and packaging with the green dot. Containers with appropriate labels are available on the terrace. Please place empty glasses and glass bottles in the right side of the kitchen trash bin. Use trash and cosmetic bins only with trash bags and dispose of them in the residual waste bin, sealing them securely. Additional trash bags can be found in the kitchenette under the sink or in the bathroom cabinet.
 
-## Reinigung
+Do not dispose of waste, food scraps, harmful liquids, or anything similar in the kitchen sink, toilet, sink, or shower! Avoid anything that can cause blockages in the pipes. All hygiene items must be disposed of in the residual waste.
 
-Sollte Ihnen einmal ein Missgeschick (extremer Schmutz, Flüssigkeiten auf dem Boden oder Arbeitsflächen usw.) passieren, bitten wir Sie dies sofort zu beseitigen. Eimer, Wischlappen und Staubsauger finden Sie in der Küchenzeile ganz rechts unten.
-Wir bitten Sie, die Wohnung bei Abreise besenrein zu hinterlassen, und alles benutzte Geschirr wieder sauber in die Schränke einzuräumen. Ihren Müll bringen Sie bitte in die auf der Terrasse befindlichen Behälter; Glas kann im Mülleimer der Küche verbleiben.
-Sollten bei Abreise noch besonders starke Verschmutzungen vorhanden sein, werden diese nach Aufwand in Rechnung gestellt. Die Kosten für eine normale Endreinigung ist im Mietpreis enthalten.
+## Cleaning
 
-## Ruhezeiten
+If an accident occurs (extreme dirt, spills on the floor or countertops, etc.), please clean it up immediately. You will find buckets, cleaning cloths, and a vacuum cleaner in the kitchenette, bottom right. We kindly ask you to leave the apartment in a swept-clean condition upon departure and to put all used dishes back in the cabinets clean. Dispose of your trash in the containers on the terrace; glass can remain in the kitchen trash bin. If particularly heavy soiling is present upon departure, additional cleaning costs will be charged based on effort. The cost of normal final cleaning is included in the rental price.
 
-Im Sinne einer guten Nachbarschaft bitten wir Sie, die öffentlichen Ruhezeiten wie Mittags-, Nacht- und Sonntagsruhe einzuhalten. Auch im Haus selbst sollte aus Rücksicht zwischen 22:00 Uhr und 7:00 Uhr Ruhe gehalten werden.
-Das Feiern oder Durchführen von Veranstaltungen ist nicht erlaubt!
+## Quiet Hours
 
-## Internet/WLAN
+In the interest of good neighborly relations, we ask you to observe public quiet hours, such as midday, night, and Sundays. Also, within the house, please maintain quiet between 10:00 PM and 7:00 AM. Parties or events are not allowed!
 
-In der Wohnung und auf der Terrasse steht Ihnen kostenfreies schnelles WLAN zur Verfügung. Den Zugangscode für Ihre WLAN-fähigen Endgeräte erhalten Sie als Auslage bei Ihrer Ankunft.
-Sie nutzen das Internet auf eigene Gefahr. Wir schließen jede Haftung im Zusammenhang mit der Internetnutzung durch Sie aus.
-Für die Nutzung des Internetzugangs über WLAN sind zusätzlich die WLAN-Nutzungsregeln zu berücksichtigen. Bitte haben Sie Verständnis dafür, dass wir uns gegen Missbrauch Ihrerseits absichern (müssen). Bei der Buchung wird dafür Ihr Einverständnis abgefordert.
+## Internet/Wi-Fi
 
-## Rauchen
+Free high-speed Wi-Fi is available in the apartment and on the terrace. You will receive the access code for your Wi-Fi-enabled devices upon arrival. You use the internet at your own risk. We disclaim any liability related to your internet usage. The use of internet access via Wi-Fi is subject to additional Wi-Fi usage rules. Please understand that we need to protect against misuse on your part; your consent is required at the time of booking.
 
-Rauchen ist in der Wohnung nicht erlaubt!
-Auf der Terrasse stehen Ihnen hierfür Sitzgelegenheiten und ein Aschenbecher zur Verfügung. Entsorgen Sie bitte die vollständig erkalteten Zigarettenreste in der Restmülltonne.
+## Smoking
 
-## Terrasse
+Smoking is not allowed in the apartment! There are seating areas and an ashtray available on the terrace for this purpose. Please dispose of completely extinguished cigarette butts in the residual waste bin.
 
-Auf der Terrasse ist für Sie eine Sitzecke eingerichtet. Die Auflagen für die Stühle finden Sie in der Sitzbank im Flur. Wir bitten diese bei schlechtem Wetter, aber generell über Nacht in die Wohnung zu holen.
+## Terrace
 
+A seating area is provided for you on the terrace. You can find chair cushions in the bench in the hallway. We kindly ask you to bring them into the apartment in case of bad weather and generally overnight.
 
-## Haustiere
+## Pets
 
-Das Mitbringen von max. zwei stubenreinen Haustieren ist nach Absprache (Angabe beim Buchungsvorgang und anschließender Bestätigung) erlaubt.
-Wir bitten darauf zu achten, dass Ihre Haustiere nicht die Sitzgelegenheiten, Betten und Möbel benutzen! Die Tiere sind auf der Terrasse anzuleinen.
+The presence of up to two house-trained pets is allowed by prior arrangement (indicated during the booking process and subsequently confirmed). Please ensure that your pets do not use the seating, beds, or furniture. Pets must be leashed on the terrace.
 
-## Parkmöglichkeiten
+## Parking
 
-Es kann direkt vor dem Haus (in Höhe der Hecke) mit einem Fahrzeug geparkt werden. Wir bitten die angrenzenden Grundstücksausfahrten und die Kreuzung unbedingt frei zu halten.
-Bitte informieren Sie uns beim Buchungsvorgang, wenn Sie weiteren Parkplatzbedarf haben. Wir sind Ihnen behilflich.
-Die Terrasse bietet für kleinere Mopeds/Motorräder und Fahrräder Platz. Die Hoftür von der Straße zur Terrasse ist 1,10 m breit. Bitte geben Sie bei Bedarf die Anzahl der Stellplätze auf der Terrasse bei der Buchung mit an. Diese sind kostenfrei.
+Parking is available directly in front of the house (at the hedge). Please be sure to keep the adjacent driveways and the intersection clear at all times. If you require additional parking spaces, please inform us during the booking process; we will assist you. The terrace can accommodate smaller mopeds/motorcycles and bicycles. The courtyard door from the street to the terrace is 1.10 meters wide. Please specify the number of parking spaces on the terrace when booking; these are free of charge.
 
-## Hausrecht/Sonstiges
+## House Rules/Miscellaneous
 
-In der Wohnung sind zusätzlich Decken und Kissen vorhanden. Diese sind nur für den In-House-Bereich vorgesehen und wir bitten Sie, diese nicht auf Ihre Tagesausflüge mitzunehmen oder auf der Terrasse als Picknick-Decken zu verwenden.
-Wir stellen Ihnen für die Dauer Ihres Aufenthaltes Geschirrtücher, Handtücher und Bettwäsche zur Verfügung. Bei Bedarf finden Sie zusätzliche Handtücher oben im Badschrank, und Geschirrtücher im Hängeschrank der Küchenzeile. Bitte werfen Sie vor Ihrer Abreise die gebrauchten Handtücher einfach im Bad auf den Boden.
+Additional blankets and pillows are available in the apartment. These are intended for in-house use only, and we kindly ask you not to take them on your day trips or use them as picnic blankets on the terrace. We provide dish towels, towels, and bed linens for the duration of your stay. If needed, you can find additional towels in the top bathroom cabinet and dish towels in the kitchenette wall cabinet. Please simply place used towels on the bathroom floor before your departure. 
 
-Bei sofort notwendigen Reparaturen/Havarie kann es unerlässlich sein, dass wir oder von uns beauftragte Personen die Ferienwohnung ohne Ihr Wissen/Ihre Anwesenheit betreten müssen. Wir bitten um Ihr Verständnis.
+In the event of urgent repairs/emergencies, it may be necessary for us or authorized persons to enter the vacation rental without your knowledge/presence. We ask for your understanding.
 
-Einen Verbandskasten für die Notfallerstversorgung finden Sie in der Küchenzeile ganz rechts oben.
+A first-aid kit for emergency care can be found in the kitchenette, top right.
 
-## Schlüssel
+## Keys
 
-Die Wohnung wird schlüssellos vermietet. Sie erhalten rechtzeitig vor Ihrer Ankunft einen 4-stelligen Code, der für die Dauer Ihres Aufenthalts Gültigkeit hat.
-Diesen geben Sie am Eingangstor und der Haustür (beide identisch) ein und bestätigen mit der Raute-Taste (#). Ein Signalton zeigt Ihnen an, dass die Tür geöffnet werden kann. Bitte merken Sie sich diesen Code und geben ihn Dritten nicht bekannt. Alternativ finden Sie im Flur blaue Chips vor, die Sie zum schnelleren Öffnen der Türen benutzen können. Vergessen Sie nicht, diese bei Abreise im Haus zu lassen, da wir bei Nichtvorfinden 10 € in Rechnung stellen müssen.
+The apartment is rented without physical keys. You will receive a 4-digit code shortly before your arrival, which will be valid for the duration of your stay. Enter this code at the entrance gate and the front door (both are the same) and confirm with the pound key (#). A signal tone will indicate that the door can be opened. Please remember this code and do not disclose it to others. Alternatively, you will find blue chips in the hallway that you can use for quicker door opening. Don't forget to leave these in the house upon departure, as we will have to charge €10 if they are not found.
 
-Sollten Sie den Code vergessen haben oder Hilfe benötigen rufen Sie uns an.
+If you forget the code or need assistance, please call us.
 
-## Haftung
+## Liability
 
-Wir haften nicht für Ihre Wertgegenstände. Ein Save befindet sich nicht in der Ferienwohnung.
+We are not liable for your valuables. A safe is not available in the vacation rental.
 
+## Check-In and Check-Out
 
-An- und Abreise
-Die Anreise ist ab 14:00 Uhr möglich.
-Am Abreisetag bitten wir Sie, die Wohnung bis spätestens 11:00 Uhr in wie oben beschriebenem Zustand freizugeben.
+Check-in is possible from 2:00 PM. On the day of departure, we kindly ask you to vacate the apartment no later than 11:00 AM in the condition described above.
 
-Stornierungen
-Wir hoffen nicht, dass Sie Ihren Aufenthalt absagen müssen. Sollte dies jedoch eintreten, fallen folgende Stornogebühren bei Rücktritt von der Buchung an:
-bis 2 Monate vor Anreisetag kostenfrei
-bis 1 Monat vor Anreisetag 50 %
-bis 14 Tage vor Anreisetag 80 %
-Stornierungen müssen bis 12:00 Uhr mittags des jeweiligen Tages durchgeführt werden. Erfolgt keine vorherige schriftliche (im Buchungsportal oder per Mail) Stornierung, müssen wir leider den kompletten Betrag in Rechnung stellen!
+## Cancellations
 
-Vorzeitige Abreise
-Bei einer vorzeitigen Abreise wird keine Rückerstattung geleistet. Wir bitten eine vorzeitige Abreise dennoch bekannt zu geben.
+We hope you do not have to cancel your stay. However, if this does occur, the following cancellation fees apply upon withdrawal from the booking:
 
+- Free until 2 months before the arrival date
+- 50% up to 1 month before the arrival date
+- 80% up to 14 days before the arrival date
 
-
-Mit der Buchung des Gasthauses erkennen Sie die Hausordnung sowie die WLAN-Nutzungsregeln an.
-Bei mehrfachem Verstoß gegen die Hausordnung und die Mietbedingungen können wir den Mietvertrag einseitig kündigen, und der Gast hat die Wohnung sofort zu verlassen. Ein Anspruch auf Rückerstattung des Mietpreises besteht in diesem Fall nicht.
-
-
-
-*Stand: Juni 2023*
-
-# Nutzungsvereinbarung für die Nutzung des Internetzugangs über LAN und WLAN
-
-## Gestattung zur Nutzung eines Internetzugangs mittels WLAN
-
-Der Vermieter unterhält in seinem Ferienobjekt einen Internetzugang über WLAN. Er gestattet dem Mieter für die Dauer seines Aufenthalts im Ferienobjekt eine Mitbenutzung des WLAN-Zugangs zum Internet. Der Mieter hat nicht das Recht, Dritten die Nutzung des WLANs zu gestatten.
-Der Vermieter gewährleistet nicht die tatsächliche Verfügbarkeit, Geeignetheit oder Zulässigkeit des Internetzugangs für irgendeinen Zweck. Er ist jederzeit berechtigt, für den Betrieb des WLANs ganz, teilweise oder zeitweise weitere Mitnutzer zuzulassen, und den Zugang des Mieters ganz, teilweise oder zeitweise zu beschränken oder auszuschließen, wenn der Anschluss rechtsmissbräuchlich genutzt wird oder wurde, soweit der Vermieter deswegen eine Inanspruchnahme fürchten muss, und dieses nicht mit üblichen und zumutbaren Aufwand in angemessener Zeit verhindern kann. Der Vermieter behält sich insbesondere vor, nach billigem Ermessen und jederzeit den Zugang auf bestimmte Seiten oder Dienste über das WLAN zu sperren (z. B. gewaltverherrlichende, pornographische oder kostenpflichtige Seiten).
-
-## Zugangsdaten
-
-Die Nutzung erfolgt mittels Zugangssicherung. Die Zugangsdaten (Login und Passwort) dürfen in keinem Fall an Dritte weitergegeben werden. Will der Mieter Dritten den Zugang zum Internet über das WLAN gewähren, so ist dies von der vorherigen schriftlichen Zustimmung des Vermieters und der mittels Unterschrift und vollständiger Identitätsangabe dokumentierter Akzeptanz der Regelungen dieser Nutzungsvereinbarung durch den Dritten zwingend abhängig. Der Miete verpflichtet sich, seine Zugangsdaten geheim zu halten. Der Vermieter hat jederzeit das Recht, Zugangscodes zu ändern.
-
-## Gefahren der WLAN-Nutzung, Haftungsbeschränkung
-
-Der Mieter wird darauf hingewiesen, dass das WLAN nur den Zugang zum Internet ermöglich, Virenschutz und Firewall stehen nicht zur Verfügung. Der unter Nutzung des WLANs hergestellte Datenverkehr erfolgt unverschlüsselt. Die Daten können daher möglicherweise von Dritten eingesehen werden. Der Vermieter weist ausdrücklich darauf hin, dass die Gefahr besteht, dass Schadsoftware (z. B. Viren, Trojaner, Würmer etc.) bei der Nutzung des WLANs auf das Endgerät gelangen kann. Die Nutzung des WLANs erfolgt auf eigene Gefahr und auf eigenes Risiko des Mieters. Für Schäden an digitalen Medien des Mieters, die durch die Nutzung des Internetzugangs entstehen, übernimmt der Vermieter keine Haftung, es sei denn, die Schäden wurden vom Vermieter und/oder seinen Erfüllungsgehilfen vorsätzlich oder grob fahrlässig verursacht.
-
-## Verantwortlichkeit und Freistellung von Ansprüchen
-
-Für die über das WLAN übermittelten Daten, die darüber in Anspruch genommenen kostenpflichtigen Dienstleistungen und getätigten Rechtsgeschäfte ist der Mieter selbst verantwortlich. Besucht der Mieter kostenpflichtige Internetseiten oder geht er Verbindlichkeiten ein, sind die daraus resultierenden Kosten von ihm zu tragen. Er ist verpflichtet, bei Nutzung des WLANs das geltende Recht einzuhalten. 
-
-Er wird insbesondere das WLAN weder zum Abruf noch zur Verbreitung von sitten- oder rechtswidrigen Inhalten nutzen,
-keine urheberrechtlich geschützten Güter widerrechtlich vervielfältigen, verbreiten oder zugänglich machen; dies gilt insbesondere im Zusammenhang mit dem Einsatz von Filesharing-Programmen,
-die geltenden Jugendschutzvorschriften beachten,
-keine belästigenden, verleumderischen oder bedrohenden Inhalte versenden oder verbreiten sowie
-das WLAN nicht zur Versendung von Massen-Nachrichten (Spam) und/oder anderen Formen unzulässiger Werbung nutzen.
-
-Der Mieter stellt den Vermieter der Ferienwohnung von sämtlichen Schäden und Ansprüchen Dritter frei, die auf einer rechtswidrigen Verwendung des WLANs durch den Mieter und/oder auf einen Verstoß gegen die vorliegende Vereinbarung beruhen. Dies erstreckt sich auch auf für mit der Inanspruchnahme bzw. deren Abwehr zusammenhängende Kosten und Aufwendungen. Erkennt der Mieter oder muss er erkennen, dass eine solche Rechtsverletzung und/oder ein solcher Verstoß vorliegt oder droht, weist er den Vermieter der Ferienwohnung auf diesen Umstand hin.
-
-
-*Wanzleben-Börde, Juni 2023*
+Cancellations must be made by 12:00

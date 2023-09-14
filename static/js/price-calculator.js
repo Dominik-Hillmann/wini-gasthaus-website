@@ -15,13 +15,25 @@ const updatePrice = () => {
     const numNights = Math.ceil(timeDelta / (24 * 60 * 60 * 1000));
     const projectedPrice = basePricePerNight * numNights * numGuests;
 
-    const numNightsOutput = numNights <= 1 ? "einer" : `${numNights}`;
-    const numGuestsOutput = numGuests <= 1 ? "einem" : `${numGuests}`;
-    const nightOutput = numNights > 1 ? "Nächten" : "Nacht";
-    const guestOutput = numGuests > 1 ? "Gästen" : "Gast";
-    priceOutput.innerHTML = numNights <= 0 
-        ? "" 
-        : `Ein Aufenthalt von ${numNightsOutput} ${nightOutput} mit ${numGuestsOutput} ${guestOutput} kostet voraussichtlich EUR ${projectedPrice}.`;
+    if (LANGUAGE === "Deutsch") {
+        const numNightsOutput = numNights <= 1 ? "einer" : `${numNights}`;
+        const numGuestsOutput = numGuests <= 1 ? "einem" : `${numGuests}`;
+        const nightOutput = numNights > 1 ? "Nächten" : "Nacht";
+        const guestOutput = numGuests > 1 ? "Gästen" : "Gast";
+        priceOutput.innerHTML = numNights <= 0 
+            ? "" 
+            : `Ein Aufenthalt von ${numNightsOutput} ${nightOutput} mit ${numGuestsOutput} ${guestOutput} kostet voraussichtlich EUR ${projectedPrice}.`;
+
+    } else if (LANGUAGE === "English") {
+        const numNightsOutput = numNights <= 1 ? "one" : `${numNights}`;
+        const numGuestsOutput = numGuests <= 1 ? "a single" : `${numGuests}`;
+        const nightOutput = numNights > 1 ? "nights" : "night";
+        const guestOutput = numGuests > 1 ? "guests" : "guest";
+        priceOutput.innerHTML = numNights <= 0 
+            ? "" 
+            : `A stay of ${numNightsOutput} ${nightOutput} accomodating ${numGuestsOutput} ${guestOutput} is expected to cost EUR ${projectedPrice}.`;
+    
+    } else console.error(`No translation found for language '${LANGUAGE}'.`);    
 };
 
 [

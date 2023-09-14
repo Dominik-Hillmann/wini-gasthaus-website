@@ -1,26 +1,47 @@
-[
-  {
-    "title": "Kostenloses WLAN",
-    "description": "Bei uns haben Sie eine Internetanbindung bis zu 1000 MBit/s.",
-    "img": "wifi.svg",
-    "link": "google.de"
-  },
-  {
-    "title": "Außenbereich",
-    "description": "Genießen Sie Ihre Zeit auch auf unserer großen Terrasse.",
-    "img": "beach.svg",
-    "link": "google.de"
-  },
-  {
-    "title": "Haustiere erlaubt",
-    "description": "Auch Haustiere haben Platz bei uns.",
-    "img": "dog.svg",
-    "link": "google.de"
-  },
-  {
-    "title": "Bis zu 6 Betten",
-    "description": "Wir bieten Ihnen bis zu 4 Betten für Erwachsene und 2 Betten für Kinder.",
-    "img": "bed.svg",
-    "link": "google.de"
-  }
-]
+{
+  "german": [
+    {
+      "title": "Kostenloses WLAN",
+      "description": "Bei uns haben Sie eine Internetanbindung bis zu 1000 MBit/s.",
+      "img": "wifi.svg"
+    },
+    {
+      "title": "Außenbereich",
+      "description": "Genießen Sie Ihre Zeit auch auf unserer großen Terrasse.",
+      "img": "beach.svg"
+    },
+    {
+      "title": "Haustiere erlaubt",
+      "description": "Auch Haustiere haben Platz bei uns.",
+      "img": "dog.svg"
+    },
+    {
+      "title": "Bis zu 6 Betten",
+      "description": "Wir bieten Ihnen bis zu 4 Betten für Erwachsene und 2 Betten für Kinder.",
+      "img": "bed.svg"
+    }
+  ],
+
+  "english": [
+    {
+      "title": "Free Wi-Fi",
+      "description": "Connection to the internet of up to 1000 MBit/s.",
+      "img": "wifi.svg"
+    },
+    {
+      "title": "Outdoor area",
+      "description": "Enjoy your time on our large terrace.",
+      "img": "beach.svg"
+    },
+    {
+      "title": "Pets allowed",
+      "description": "We also have space for pets.",
+      "img": "dog.svg"
+    },
+    {
+      "title": "Up to 6 beds",
+      "description": "We offer you up to 4 beds for adults and 2 beds for children.",
+      "img": "bed.svg"
+    }
+  ]
+}
