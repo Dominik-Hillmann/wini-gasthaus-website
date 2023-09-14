@@ -1,13 +1,32 @@
 ---
-title: "Beispielbewertung 1"
-date: 2022-06-05
+title: It was a very pleasant stay
+date: 2023-08-20
 draft: false
-symbol: /img/face1.jpg
-clean: 4.9
-fits_spec: 4.1
-communication: 5.0
-location: 4.6
-check_in: 4.9
-price_performance: 4.5
+image: /img/slides/dom.jpeg
+score: 10
+summary: "We were warmly welcomed by the hosts. 
+The apartment paid attention to many details, and the kitchen is equipped with everything you need 
+for daily life."
 ---
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+---
+
+## Pros
+
+We were warmly welcomed by the hosts. 
+The apartment paid attention to many details, and the kitchen is equipped with everything you need 
+for daily life. 
+(Except for groceries 😉) We had a welcome basket with sparkling water, fruit, small snacks, and cookies. 
+The other rooms (bathroom, bedroom, living room with Wi-Fi access, and a PC, large flat-screen TV) 
+were all clean, with lovely little details. The hosts also checked in when we met outside to ensure 
+everything was fine or if we needed information about the area. Very friendly overall. We felt very 
+comfortable as a family.
+
+---
+
+## Cons
+
+*No entries*
+
+---
+**Rating on [booking.com](https://www.booking.com/hotel/de/gasthaus-wini.de.html): 10 out of 10**

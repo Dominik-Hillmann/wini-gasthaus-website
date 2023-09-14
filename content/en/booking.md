@@ -1,11 +1,10 @@
 ---
-title: Buchung
+title: Booking
 date: 2023-06-06
 layout: booking
 ---
 
-Sehr geehrte Gäste, wir freuen uns sehr, dass Sie das Gasthaus Wini für eine oder mehrere Nächte
-besuchen möchten.
-Eine Erfolgsmeldung bedeutet nicht, dass das Gasthaus gebucht ist. 
-Bitte geben Sie uns einen Tag Zeit, um Ihre Buchung zu überprüfen und eine Rechnung an die von Ihnen
-genannte E-Mail-Adresse zu übersenden.
+Dear guests, we are delighted that you would like to visit Gasthaus Wini for one or more nights. 
+A successful message does not mean that the inn is booked. 
+Please allow us one day to verify your reservation and send an invoice to the email address you 
+provided.

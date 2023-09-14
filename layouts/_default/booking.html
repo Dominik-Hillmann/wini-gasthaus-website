@@ -17,6 +17,8 @@
 </head>
 
 <body>
+  {{ $isGerman := eq .Language.LanguageName "Deutsch" }}
+
   {{- partial "alert.html" . -}}
 
   {{- partial "header.html" . -}}
@@ -29,6 +31,8 @@
     <div id="form-calendar-wrapper" class="mx-3 col-span-3 lg:col-span-2 px-2">
       <h1 class="title text-5xl mb-4">{{ .Title }}</h1>
       <div id="prose" class="content prose md:prose-lg lg:prose-xl max-w-none py-1">{{ .Content }}</div>
+      
+      {{- if eq .Language.LanguageName "Deutsch" }}
 
       <div id="smoobuApartment1855499de" class="calendarWidget">
         <div 
@@ -41,13 +45,28 @@
         <script type="text/javascript" src="https://login.smoobu.com/js/Apartment/CalendarWidget.js"></script>
       </div>
 
+      {{- else }}
+
+      <div id="smoobuApartment1855499en" class="calendarWidget">
+        <div 
+          class="calendarContent bg-white justify-centery" 
+          data-load-calendar-url="https://login.smoobu.com/en/cockpit/widget/single-calendar/1855499" 
+          data-verification="fa52fdb4acf928d7be3ea8489f8c7e1655d1b3b516cac24bb1a0e64dc9ec6625" 
+          data-baseUrl="https://login.smoobu.com" 
+          data-disable-css="false">
+        </div>
+        <script type="text/javascript" src="https://login.smoobu.com/js/Apartment/CalendarWidget.js"></script>
+      </div>
+      
+      {{- end }}
+
       <form name="contact" id="contact">
 
         <div id="calendar-wrapper">
           <div class="calendar"></div>
           <div id="dates-selector-wrapper" class="flex justify-between py-2">
             <div class="flex-1 p-4 input bg-gray-200 border border-gray-200 p-4 focus:outline-none focus:bg-white focus:border-gray-500">
-              <label for="start">Vom</label>
+              <label for="start">{{ if $isGerman }}Vom{{ else }}From{{ end }}</label>
               <input 
                 type="date" 
                 id="start" 
@@ -59,7 +78,7 @@
             </div>
 
             <div class="flex-1 p-4 input bg-gray-200 border border-gray-200 p-4 focus:outline-none focus:bg-white focus:border-gray-500">
-              <label for="end">bis</label>
+              <label for="end">{{ if $isGerman }}bis{{ else }}to{{ end }}</label>
               <input 
                 type="date" 
                 id="end" 
@@ -71,7 +90,7 @@
             </div>
 
             <div class="flex-1 p-4 input bg-gray-200 border border-gray-200 p-4 focus:outline-none focus:bg-white focus:border-gray-500">
-              <label for="num-people">Anzahl Gäste: </label>
+              <label for="num-people">{{ if $isGerman }}Anzahl Gäste:{{ else }}Number of guests:{{ end }} </label>
               <input
                 type="number"
                 id="number-people"
@@ -103,7 +122,7 @@
         <div class="input">
           <input 
             type="text" 
-            placeholder="Titel" 
+            placeholder={{ if $isGerman }}"Titel"{{ else }}"Title"{{ end }}
             name="title"
             class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
             required>
@@ -113,7 +132,7 @@
           <textarea 
             rows="5" 
             cols="30" 
-            placeholder="Nachricht" 
+            placeholder={{ if $isGerman }}"Nachricht"{{ else }}"Message"{{ end }}
             name="message"
             class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
             required></textarea>
@@ -123,7 +142,7 @@
 
         <input 
           type="submit" 
-          value="Senden"
+          value={{ if $isGerman }}"Senden"{{ else }}"Send"{{ end }}
           class="px-8 py-2 pt-5 duration-200 bg-gray-800 text-white cursor-pointer transition-colors hover:bg-gray-400">
       </form>
     </div>
@@ -131,7 +150,12 @@
 
   {{- partial "footer.html" . -}}
 </body>
-
+{{/* These values are set dynamically to adjust the calculator to the language. */}}
+{{- if $isGerman }}
+<script>const LANGUAGE = "Deutsch"</script>
+{{- else }}
+<script>const LANGUAGE = "English"</script>
+{{- end }}
 <script src="/js/submit-form.js"></script>
 <script src="/js/price-calculator.js"></script>
 

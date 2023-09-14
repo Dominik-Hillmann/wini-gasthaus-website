@@ -1,13 +1,30 @@
 ---
-title: "Beispielbewertung 3"
-date: 2022-12-12
+title: Almost Perfect
+date: 2023-09-06
 draft: false
-symbol: /img/face3.jpg
-clean: 4.9
-fits_spec: 4.1
-communication: 5.0
-location: 4.6
-check_in: 4.9
-price_performance: 4.5
+image: /img/slides/guericke.jpeg
+score: 8
+summary: "Spacious house. Truly secluded. Shops within walking distance. Private outdoor space. 
+Very well-equipped. We were with our dogs. They can be on the terrace but must be on a leash."
 ---
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+---
+
+## Pros
+
+Spacious house. Truly secluded. Shops within walking distance. Private outdoor space. 
+Very well-equipped. We were with our dogs. They can be on the terrace but must be on a leash. 
+It served as a stopover for us and certainly met our needs.
+
+---
+
+## Cons
+
+The downside is showering in the bathtub, mainly because there's no support when getting out. 
+I didn't want to pull up the (beautiful) shower curtain because it would leak too much outside the tub. 
+The kitchen faucet initially provides hot water when you want cold, which is not convenient. 
+I don't think it's properly connected. It continues to drip even after turning it off.
+
+---
+
+**Rating on [booking.com](https://www.booking.com/hotel/de/gasthaus-wini.de.html): 8 out of 10**

@@ -1,13 +1,33 @@
 ---
-title: "Beispielbewertung 3"
-date: 2022-12-12
+title: Fast Perfekt
+date: 2023-09-06
 draft: false
-symbol: /img/face3.jpg
-clean: 4.9
-fits_spec: 4.1
-communication: 5.0
-location: 4.6
-check_in: 4.9
-price_performance: 4.5
+image: /img/slides/guericke.jpeg
+score: 8
+summary: "Geräumiges Haus. Wirklich abgeschieden. Geschäfte zu Fuß erreichbar. Eigener Außenbereich. 
+Sehr gut ausgestattet. Wir waren mit unseren Hunden dort. Sie dürfen auf der Terrasse sein, aber müssen 
+an der Leine sein."
 ---
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+---
+
+## Pro
+
+Geräumiges Haus. Wirklich abgeschieden. Geschäfte zu Fuß erreichbar. Eigener Außenbereich. 
+Sehr gut ausgestattet. Wir waren mit unseren Hunden dort. Sie dürfen auf der Terrasse sein, aber müssen 
+an der Leine sein. Sie ist nicht abgeschlossen. 
+Es diente uns als Zwischenstopp und hat unsere Bedürfnisse definitiv erfüllt.
+
+---
+
+## Contra
+
+Der Nachteil ist das Duschen in der Badewanne, hauptsächlich, weil es beim Aussteigen keine Haltemöglichkeit gibt. 
+Ich wollte den (wunderschönen) Duschvorhang nicht hochziehen, weil dann zu viel Wasser aus der Badewanne 
+austreten würde. Der Wasserhahn in der Küche liefert zuerst heißes Wasser, wenn Sie kaltes möchten, 
+was unpraktisch ist. Ich glaube nicht, dass er richtig angeschlossen ist. Er tropft auch nach dem 
+Schließen weiter.
+
+---
+
+**Bewertung auf [booking.com](https://www.booking.com/hotel/de/gasthaus-wini.de.html): 8 von 10**

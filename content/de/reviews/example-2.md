@@ -1,13 +1,37 @@
 ---
-title: "Beispielbewertung 2"
-date: 2023-09-12
+title: Super Unterkunft mit hoher Ausstattung
+date: 2023-08-16
 draft: false
-symbol: /img/face2.jpg
-clean: 4.9
-fits_spec: 4.1
-communication: 5.0
-location: 4.6
-check_in: 4.9
-price_performance: 4.5
+image: /img/slides/hassel.jpeg
+score: 9
+summary: "Die Wohnung hat uns wirklich sehr gut gefallen. Sie ist sehr hochwertig eingerichtet. 
+Mit vielen persönlichen Gegenständen, so dass man sich gleich zu Hause fühlt."
 ---
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+---
+
+## Pro
+
+Die Wohnung hat uns wirklich sehr gut gefallen. Sie ist sehr hochwertig eingerichtet. 
+Mit vielen persönlichen Gegenständen, so dass man sich gleich zu Hause fühlt.
+Wir haben alles gefunden was wir gebraucht haben. Die Gastgeber wohnen nebenan und helfen gerne 
+weiter.
+Die Lage war für Ausflüge nach Magdeburg sehr gut. Für Quedlinburg etc ist es ein wenig weiter aber 
+trotzdem gut machbar.
+Angenehm war dass man vor dem Haus genug Grünstreifen für Gassirunden hatte. 
+Der Hundekotmülleimer ist nur 20 Meter vom Haus entfernt, so dass man seine Tüten auch gleich 
+loswerden konnte.
+
+---
+
+## Contra
+
+Das einzige was etwas unbequem war ist die Dusche in der Badewanne. 
+Das ist aber meckern auf hohem Niveau. 
+Damit kommt man gut klar.
+Und der etwas weiterere Weg zu Sehenswürdigkeiten wie den Brocken, die Rübenhöhlen, Hexenplatz etc.
+
+---
+
+**Bewertung auf [booking.com](https://www.booking.com/hotel/de/gasthaus-wini.de.html): 9 von 10**
+ 
