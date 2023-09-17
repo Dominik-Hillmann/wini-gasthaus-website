@@ -14,7 +14,7 @@ defaultContentLanguageInSubdir = false
   googleFonts = true
 
   [params.logo]
-    # main = "img/logo/logo.svg"
+    main = "/img/logo-gasthaus-wini.png"
     alt = "Gasthaus Wini"
 
     # The size parameter is the class name of tailwindcss
