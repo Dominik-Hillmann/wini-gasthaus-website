@@ -2,6 +2,7 @@
 title: Booking
 date: 2023-06-06
 layout: booking
+author: Dominik Hillmann
 ---
 
 Dear guests, we are delighted that you would like to visit Gasthaus Wini for one or more nights. 

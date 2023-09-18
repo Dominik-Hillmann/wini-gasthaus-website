@@ -1,5 +1,7 @@
 ---
+aliases: ["reviews"]
 title: Reviews
+author: Dominik Hillmann
 date: 2022-09-15
 draft: false
 ---

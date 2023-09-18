@@ -1,6 +1,7 @@
 ---
 title: Impressum
 date: 2023-06-06
+author: Dominik Hillmann
 ---
 
 ## Angaben gem. § 5 TMG

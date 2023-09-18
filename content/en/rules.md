@@ -1,4 +1,10 @@
-# House Rules
+---
+title: House Rules
+date: 2023-06-06
+author: Dominik Hillmann
+---
+
+---
 
 ## Kitchen/Bathroom
 
