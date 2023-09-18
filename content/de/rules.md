@@ -1,4 +1,10 @@
-# Hausordnung
+---
+title: Hausordnung
+date: 2023-06-06
+author: Dominik Hillmann
+---
+
+---
 
 ## Küche/Bad
 
