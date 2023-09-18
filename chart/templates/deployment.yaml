@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wini-gasthaus-website
+spec:
+  selector:
+    matchLabels:
+      app: wini-gasthaus-website
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: wini-gasthaus-website
+    spec:
+      containers:
+        - name: wini-gasthaus-website
+          image: dominikhillmann/wini-gasthaus-website:0.1.0
+          ports:
+            - containerPort: 80
