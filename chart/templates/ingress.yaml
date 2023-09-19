@@ -2,35 +2,29 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: wini-gasthaus-website
+  name: {{ .Values.resourcesName }}
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
-    traefik.ingress.kubernetes.io/redirect-entry-point: websecure
-    traefik.ingress.kubernetes.io/router.tls: "true"
-  labels:
-    app: wini-gasthaus-website
-
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: {{ .Values.ingress.clusterIssuer }}
 spec:
   tls:
-    - secretName: wini-gasthaus-website
+    - hosts:
+      {{- range .Values.ingress.hosts }}
+      - {{ . }}
+      {{- end }}
+      secretName: {{ .Values.ingress.tlsSecretName }}
   rules:
-    - host: gasthaus-wini.com
+    {{- $resourcesName := .Values.resourcesName }}
+    {{- $port := .Values.service.port }}
+    {{- range .Values.ingress.hosts }}
+    - host: {{ . }}
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: wini-gasthaus-website
+                name: {{ $resourcesName }}
                 port:
-                  name: http-server
-          # Redirect to HTTPS
-          # This rule is only required if you want to redirect HTTP traffic to HTTPS
-          # If you do not want to redirect HTTP traffic, you can remove this rule
-          - path: /*
-            pathType: Prefix
-            backend:
-              service:
-                name: wini-gasthaus-website
-                port:
-                  name: http-server
+                  number: {{ $port }}
+    {{- end }}

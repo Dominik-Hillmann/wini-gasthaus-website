@@ -2,13 +2,14 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: wini-gasthaus-website
+  name: {{ .Values.resourcesName }}
   
 spec:
-  secretName: wini-gasthaus-website
+  secretName: {{ .Values.ingress.tlsSecretName }}
   dnsNames:
-    - gasthaus-wini.com
+    {{- range .Values.ingress.hosts }}
+    - {{ . }}
+    {{- end }}
   issuerRef:
-    name: letsencrypt-prod
+    name: {{ .Values.ingress.clusterIssuer }}
     kind: ClusterIssuer
-

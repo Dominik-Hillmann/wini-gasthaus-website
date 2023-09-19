@@ -2,15 +2,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: wini-gasthaus-website
+  name: {{ .Values.resourcesName }}
   labels:
-    app: wini-gasthaus-website
+    app: {{ .Values.resourcesName }}
 
 spec:
   ports:
     - name: http-server
       protocol: TCP
-      port: 80
-      targetPort: 80
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}
   selector:
-    app: wini-gasthaus-website
+    app: {{ .Values.resourcesName }}
