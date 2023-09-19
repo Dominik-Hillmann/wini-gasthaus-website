@@ -1,2 +1,2 @@
 #! /bin/bash
-helm install wini-gasthaus-website chart/ -n wini-prod
+helm upgrade wini-gasthaus-website chart/ --install -n wini-prod

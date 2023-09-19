@@ -4,6 +4,7 @@ document.getElementById("contact").addEventListener("submit", function (event) {
     const formData = new FormData(this);
 
     // Use fetch to send the data to the backend API
+    // TODO: backend URL
     fetch("http://localhost:8000/submit-form", {
         method: "POST",
         headers: {

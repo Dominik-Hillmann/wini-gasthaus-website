@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wini-gasthaus-website
+  name: {{ .Values.resourcesName }}
 spec:
   selector:
     matchLabels:
-      app: wini-gasthaus-website
-  replicas: 2
+      app: {{ .Values.resourcesName }}
+  replicas: {{ .Values.replicaCount }}
   template:
     metadata:
       labels:
-        app: wini-gasthaus-website
+        app: {{ .Values.resourcesName }}
     spec:
       containers:
-        - name: wini-gasthaus-website
-          image: dominikhillmann/wini-gasthaus-website:0.1.0
+        - name: {{ .Values.resourcesName }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           ports:
-            - containerPort: 80
+            - containerPort: {{ .Values.service.port }}
