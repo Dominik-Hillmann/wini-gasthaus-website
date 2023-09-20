@@ -1,0 +1,75 @@
+<style>
+    .blurred-img {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .blurred-img.loaded::before {
+        animation: none;
+        content: none;
+    }
+
+    .blurred-img img {
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
+    }
+
+    .blurred-img.loaded img {
+        opacity: 1;
+    }
+
+    .blurred-img::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        animation: pulse 2.5s infinite;
+        background-color: white;
+    }
+
+    @keyframes pulse {
+        0% {
+            opacity: 0;
+        } 50% {
+            opacity: 0.1;
+        } 100% {
+            opacity: 0;
+        }
+    }
+</style>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        {{ range .Site.Data.slide }}
+        <div class="swiper-slide">
+            <div class="blurred-img" style="background-image: url({{ .blur }});">
+                <img src="{{ .image }}" class="blurry-loaded" alt="" loading="lazy">
+            </div>
+            <div class="s-fade-txt">
+                <h1 class="text-4xl {{ or .color "text-white" }}">{{ .title }}</h1>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<script>
+    const blurredImageDivs = document.getElementsByClassName("blurred-img");
+    console.log(blurredImageDivs)
+    Array.from(blurredImageDivs).forEach(div => {
+        function loaded() {
+            div.classList.add("loaded")
+        }
+
+        const img = div.querySelector("img")
+
+        if (img.complete) {
+            loaded()
+        } else {
+            img.addEventListener("load", loaded)
+        }
+    });
+</script>

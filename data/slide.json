@@ -1,14 +1,17 @@
 [
     {
       "title": "",
-      "image": "img/slides/eins.JPG"
+      "image": "img/slides/eins.JPG",
+      "blur": "img/slides/eins-small.JPG"
     },
     {
       "title": "",
-      "image": "img/slides/zwei.JPG"
+      "image": "img/slides/zwei.JPG",
+      "blur": "img/slides/zwei-small.JPG"
     },
     {
       "title": "",
-      "image": "img/slides/drei.JPG"
+      "image": "img/slides/drei.JPG",
+      "blur": "img/slides/drei-small.JPG"
     }
-  ]
+]
