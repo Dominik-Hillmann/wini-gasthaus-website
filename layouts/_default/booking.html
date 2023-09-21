@@ -64,9 +64,10 @@
 
         <div id="calendar-wrapper">
           <div class="calendar"></div>
-          <div id="dates-selector-wrapper" class="flex justify-between py-2">
-            <div class="flex-1 p-4 input bg-gray-200 border border-gray-200 p-4 focus:outline-none focus:bg-white focus:border-gray-500">
-              <label for="start">{{ if $isGerman }}Vom{{ else }}From{{ end }}</label>
+
+          <div id="dates-selector-wrapper" class="flex justify-start py-2">
+            <div class="flex p-4 mr-2 input bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
+              <label for="start">{{ if $isGerman }}Vom{{ else }}From{{ end }}&nbsp;</label>
               <input 
                 type="date" 
                 id="start" 
@@ -77,8 +78,8 @@
                 class="bg-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
             </div>
 
-            <div class="flex-1 p-4 input bg-gray-200 border border-gray-200 p-4 focus:outline-none focus:bg-white focus:border-gray-500">
-              <label for="end">{{ if $isGerman }}bis{{ else }}to{{ end }}</label>
+            <div class="flex p-4 ml-2 input bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
+              <label for="end">{{ if $isGerman }}bis{{ else }}to{{ end }}&nbsp;</label>
               <input 
                 type="date" 
                 id="end" 
@@ -88,21 +89,45 @@
                 required
                 class="bg-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
             </div>
-
-            <div class="flex-1 p-4 input bg-gray-200 border border-gray-200 p-4 focus:outline-none focus:bg-white focus:border-gray-500">
-              <label for="num-people">{{ if $isGerman }}Anzahl Gäste:{{ else }}Number of guests:{{ end }} </label>
-              <input
-                type="number"
-                id="number-people"
-                name="num-people"
-                value="1"
-                min="1"
-                max="6"
-                required
-                class="bg-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
-            </div>
           </div>
         </div>
+
+          <div class="input">
+            <div id="dates-selector-wrapper" class="flex justify-start py-2">
+              <div class="flex p-4 mr-2 input bg-gray-200 border border-gray-200 p-4 focus:outline-none focus:bg-white focus:border-gray-500">
+                <label for="num-adults">{{ if $isGerman }}Anzahl Erwachsene:{{ else }}Number of adults:{{ end }}&nbsp;</label>
+                <input
+                  type="number"
+                  id="num-adults"
+                  name="num-adults"
+                  value="1"
+                  min="1"
+                  max="6"
+                  required
+                  class="bg-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
+              </div>
+              <div class="flex p-4 ml-2 mr-2 input bg-gray-200 border border-gray-200 p-4 focus:outline-none focus:bg-white focus:border-gray-500">
+                <label for="num-children">{{ if $isGerman }}Anzahl Kinder:{{ else }}Number of children:{{ end }}&nbsp; </label>
+                <input
+                  type="number"
+                  id="num-children"
+                  name="num-children"
+                  value="0"
+                  min="0"
+                  max="2"
+                  required
+                  class="bg-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
+              </div>
+              <div class="flex p-4 ml-2 input bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
+                <label for="pets-included">{{ if $isGerman }}Haustiere:{{ else }}Pets:{{ end }}&nbsp;</label>
+                <input
+                  type="checkbox"
+                  id="pets-included"
+                  name="pets-included"
+                  class="bg-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
+              </div>
+            </div>
+          </div>
 
         <div class="input">
           <input type="text" placeholder="Name" name="name"
@@ -115,15 +140,6 @@
             type="text" 
             placeholder="E-Mail" 
             name="mail"
-            class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
-            required>
-        </div>
-
-        <div class="input">
-          <input 
-            type="text" 
-            placeholder={{ if $isGerman }}"Titel"{{ else }}"Title"{{ end }}
-            name="title"
             class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
             required>
         </div>
