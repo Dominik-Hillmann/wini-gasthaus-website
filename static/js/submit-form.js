@@ -7,15 +7,15 @@ document.getElementById("contact").addEventListener("submit", function (event) {
     // TODO: backend URL
     fetch("http://localhost:8000/submit-form", {
         method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             start: formData.get("start"),
             end: formData.get("end"),
+            numAdults: formData.get("num-adults"),
+            numChildren: formData.get("num-children"),
+            petsIncluded: formData.get("pets-included"),
             name: formData.get("name"),
             mail: formData.get("mail"),
-            title: formData.get("title"),
             message: formData.get("message")
         })
     })
