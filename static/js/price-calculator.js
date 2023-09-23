@@ -19,7 +19,6 @@ const updatePrice = () => {
     const projectedPrice = numNights 
         * (adultBasePricePerNight * numAdults 
         + childBasePricePerNight * numChildren);
-    console.log(projectedPrice)
 
     if (LANGUAGE === "Deutsch") {
         const numNightsOutput = numNights <= 1 ? "einer" : `${numNights}`;
@@ -54,12 +53,6 @@ const updatePrice = () => {
                 EUR ${projectedPrice}.`;
     
     } else console.error(`No translation found for language '${LANGUAGE}'.`);
-    console.log([
-        startDateInput, 
-        endDateInput, 
-        numAdultsInput,
-        numChildrenInput
-    ])  
 };
 
 [

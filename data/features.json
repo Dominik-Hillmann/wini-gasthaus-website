@@ -11,14 +11,19 @@
       "img": "beach.svg"
     },
     {
-      "title": "Haustiere erlaubt",
-      "description": "Auch Haustiere haben Platz bei uns.",
+      "title": "Haustiere auf Anfrage",
+      "description": "Auch Haustiere haben Platz bei uns. Der Aufenthalt kostet EUR 10 je Aufenthalt & Tier.",
       "img": "dog.svg"
     },
     {
       "title": "Bis zu 6 Betten",
       "description": "Wir bieten Ihnen bis zu 4 Betten für Erwachsene und 2 Betten für Kinder.",
       "img": "bed.svg"
+    },
+    {
+      "title": "Arbeitsplatz vorhanden",
+      "description": "Wir bieten ruhigen Arbeitsplatz mit Bildschirm, Tastatur und Mouse.",
+      "img": "workplace.svg"
     }
   ],
 
@@ -34,14 +39,19 @@
       "img": "beach.svg"
     },
     {
-      "title": "Pets allowed",
-      "description": "We also have space for pets.",
+      "title": "Pets upon request",
+      "description": "Pets are welcome in our flat. The stay costs EUR 10 per stay & per pet.",
       "img": "dog.svg"
-    },
+    },    
     {
       "title": "Up to 6 beds",
       "description": "We offer you up to 4 beds for adults and 2 beds for children.",
       "img": "bed.svg"
-    }
+    },
+    {
+      "title": "Workspace available",
+      "description": "We offer a quiet workspace with a monitor, keyboard, and mouse.",
+      "img": "workplace.svg"
+    }    
   ]
 }
