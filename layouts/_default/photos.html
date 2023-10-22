@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  {{- partial "head.html" . -}}
+  <meta name="description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" />
+  <meta property="og:title" content="{{ .Site.Params.homepage_meta_tags.meta_og_title }}" />
+  <meta property="og:type" content="{{ .Site.Params.homepage_meta_tags.meta_og_type }}" />
+  <meta property="og:url" content="{{ .Site.Params.homepage_meta_tags.meta_og_url }}" />
+  <meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image }}" />
+  <meta property="og:description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" />
+  <meta name="twitter:card" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_card }}" />
+  <meta name="twitter:site" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_site }}" />
+  <meta name="twitter:creator" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_creator }}" />
+
+  <link rel="stylesheet" href="/css/photos.css" />
+
+</head>
+<body>
+
+{{ $isGerman := eq .Language.LanguageName "Deutsch" }}
+
+{{- partial "alert.html" . -}}
+
+{{- partial "header.html" . -}}
+
+<div class="mx-auto my-10 max-w-6xl">
+    <div class="scroll-top rounded-full">
+        <span class="icon-keyboard_arrow_up text-2xl"></span>
+    </div>
+
+
+    <div class="image-grid">
+        <div class="image-item">
+            <img src="/img/photos/image1.jpg" alt="Image 1">
+        </div>
+        <div class="image-item">
+            <img src="/img/photos/image2.jpg" alt="Image 2">
+        </div>
+        <div class="image-item">
+            <img src="/img/photos/image3.jpg" alt="Image 2">
+        </div>
+        <div class="image-item">
+            <img src="/img/photos/image4.jpg" alt="Image 2">
+        </div>
+        <div class="image-item">
+            <img src="/img/photos/image5.jpg" alt="Image 2">
+        </div>
+        <div class="image-item">
+            <img src="/img/photos/image6.jpg" alt="Image 2">
+        </div>
+        <div class="image-item">
+            <img src="/img/photos/image7.jpg" alt="Image 2">
+        </div>
+        <div class="image-item">
+            <img src="/img/photos/image8.jpg" alt="Image 2">
+        </div>
+    </div>
+
+    <div class="overlay">
+        <span class="close-button" onclick="closeOverlay()">&times;</span>
+        <div class="imgs-wrapper">
+            <img class="arrow-button" src="/img/left-arrow.svg">
+            <img id="overlay-image" src="" alt="Overlay Image">
+            <img class="arrow-button" src="/img/right-arrow.svg">
+        </div>
+    </div>
+
+    <script>
+        const imageItems = document.querySelectorAll('.image-item');
+        const overlay = document.querySelector('.overlay');
+        const overlayImage = document.getElementById('overlay-image');
+        let currentUsedImgIndex = NaN;
+
+        imageItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                overlayImage.src = `/img/photos/image${index + 1}.jpg`;
+                overlay.style.display = 'block';
+                currentUsedImgIndex = index;
+            });
+        });
+
+        const closeOverlay = () => {
+            overlay.style.display = 'none';
+        }
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                closeOverlay();
+            }
+        });
+
+        const [leftArrow, rightArrow] = document.getElementsByClassName("arrow-button");
+        
+        leftArrow.addEventListener("click", () => {
+            const newIndex = currentUsedImgIndex - 1 < 0
+                ? imageItems.length - 1
+                : currentUsedImgIndex - 1;
+            overlayImage.src = `/img/photos/image${newIndex + 1}.jpg`;
+            currentUsedImgIndex = newIndex;
+        });
+
+        rightArrow.addEventListener("click", () => {
+            const newIndex = currentUsedImgIndex + 1 > imageItems.length - 1
+                ? 0
+                : currentUsedImgIndex + 1;
+            overlayImage.src = `/img/photos/image${newIndex + 1}.jpg`;
+            currentUsedImgIndex = newIndex;
+        });
+    </script>
+    </div>
+
+  {{- partial "footer.html" . -}}
+</body>
+{{/* These values are set dynamically to adjust the calculator to the language. */}}
+{{- if $isGerman }}
+<script>const LANGUAGE = "Deutsch"</script>
+{{- else }}
+<script>const LANGUAGE = "English"</script>
+{{- end }}
+<script src="/js/submit-form.js"></script>
+<script src="/js/price-calculator.js"></script>
+
+</html>
