@@ -1,0 +1,75 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.image-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#overlay-image {
+    display: block;
+    max-width: 70%;
+    max-height: 70%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.arrow-button {
+    display: block;
+    width: 3%;
+    fill: white;
+}
+
+.arrow-button {
+    position: absolute;
+    top: 45%;
+    cursor: pointer;
+}
+
+.arrow-button:nth-of-type(1) {
+    left: 5%;
+}
+
+.arrow-button:nth-of-type(3) {
+    float: right;
+    right: 5%;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}

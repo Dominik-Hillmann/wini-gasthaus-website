@@ -46,18 +46,24 @@ defaultContentLanguageInSubdir = false
     name = "Buchung"
     url = "/booking/"
     weight = 1
+  
+  [[menu.main]]
+    identifier = "photos"
+    name = "Fotos"
+    url = "/photos/"
+    weight = 2
 
   [[menu.main]]
     identifier = "reviews"
     name = "Bewertungen"
     url = "/reviews/"
-    weight = 2
+    weight = 3
 
   [[menu.main]]
     identifier = "rules"
     name = "Hausordnung"
     url = "/rules/"
-    weight = 3
+    weight = 4
 
   [[menu.main]]
     identifier = "language"
@@ -119,11 +125,19 @@ defaultContentLanguageInSubdir = false
           name = "Booking"
           url = "/en/booking/"
           weight = 1
+          
+        [[languages.en.menu.main]]
+          identifier = "photos"
+          name = "Photos"
+          url = "/en/photos/"
+          weight = 2
+        
         [[languages.en.menu.main]]
           identifier = "reviews"
           name = "Reviews"
           url = "/en/reviews/"
-          weight = 2
+          weight = 3
+        
         [[languages.en.menu.main]]
           identifier = "rules"
           name = "House Rules"
