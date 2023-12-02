@@ -59,6 +59,12 @@ defaultContentLanguageInSubdir = false
     url = "/rules/"
     weight = 3
 
+  [[menu.main]]
+    identifier = "language"
+    name = "English version"
+    url = "/en/"
+    weight = 4
+
   # Footer Menu
   [[menu.footer]]
     name = "Home"
@@ -123,6 +129,11 @@ defaultContentLanguageInSubdir = false
           name = "House Rules"
           url = "/en/rules/"
           weight = 3
+        [[languages.en.menu.main]]
+          identifier = "language"
+          name = "Deutsche Version"
+          url = "/de/"
+          weight = 4
         # Footer Menu
         [[languages.en.menu.footer]]
           name = "Home"
