@@ -1,4 +1,4 @@
-FROM betterweb/hugo:extended-0.115.4-18-1.20.6 as build
+FROM betterweb/hugo:extended-0.115.4-18-1.21.5 as build
 
 WORKDIR /app
 COPY . /app
