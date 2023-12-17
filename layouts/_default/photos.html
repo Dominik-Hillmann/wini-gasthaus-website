@@ -14,7 +14,6 @@
   <meta name="twitter:creator" content="{{ .Site.Params.homepage_meta_tags.meta_twitter_creator }}" />
 
   <link rel="stylesheet" href="/css/photos.css" />
-
 </head>
 <body>
 
@@ -25,36 +24,26 @@
 {{- partial "header.html" . -}}
 
 <div class="mx-auto my-10 max-w-6xl">
+
+    <h1 class="title text-5xl font-bold mb-3">{{.Title}}</h1>
+
+    <p>{{ .Content }}</p>
+
+    <div class="content py-1">{{.Content}}</div>
+
     <div class="scroll-top rounded-full">
         <span class="icon-keyboard_arrow_up text-2xl"></span>
     </div>
 
 
     <div class="image-grid">
+        {{ range sort (readDir "static/img/photos/") "Name" }}
+        {{ if (findRE ".jpg$" .Name) }}
         <div class="image-item">
-            <img src="/img/photos/image1.jpg" alt="Image 1">
+            <img src="/img/photos/{{ .Name }}">
         </div>
-        <div class="image-item">
-            <img src="/img/photos/image2.jpg" alt="Image 2">
-        </div>
-        <div class="image-item">
-            <img src="/img/photos/image3.jpg" alt="Image 2">
-        </div>
-        <div class="image-item">
-            <img src="/img/photos/image4.jpg" alt="Image 2">
-        </div>
-        <div class="image-item">
-            <img src="/img/photos/image5.jpg" alt="Image 2">
-        </div>
-        <div class="image-item">
-            <img src="/img/photos/image6.jpg" alt="Image 2">
-        </div>
-        <div class="image-item">
-            <img src="/img/photos/image7.jpg" alt="Image 2">
-        </div>
-        <div class="image-item">
-            <img src="/img/photos/image8.jpg" alt="Image 2">
-        </div>
+        {{ end }}
+        {{ end }}
     </div>
 
     <div class="overlay">
@@ -68,42 +57,73 @@
 
     <script>
         const imageItems = document.querySelectorAll('.image-item');
+        const imgs = [...imageItems].map(item => item.getElementsByTagName("img")[0]);
         const overlay = document.querySelector('.overlay');
         const overlayImage = document.getElementById('overlay-image');
         let currentUsedImgIndex = NaN;
+        let currentlyUsedImg = null;
 
         imageItems.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                overlayImage.src = `/img/photos/image${index + 1}.jpg`;
+            const img =  item.getElementsByTagName("img")[0];
+            const splitImgUrl = img.src.split("/");
+            const imgFileName = splitImgUrl[splitImgUrl.length - 1];
+
+            item.addEventListener("click", () => {
+                overlayImage.src = `/img/photos/${imgFileName}`;
                 overlay.style.display = 'block';
-                currentUsedImgIndex = index;
+                getCurrentImgIndex()
+                // currentUsedImgIndex = index;
+                currentlyUsedImg = img;
             });
         });
 
-        const closeOverlay = () => {
-            overlay.style.display = 'none';
-        }
+        const closeOverlay = () => overlay.style.display = 'none';
 
         overlay.addEventListener('click', (e) => {
             if (e.target === overlay) {
                 closeOverlay();
             }
         });
+        
+        const getCurrentImg = () => {
+            const currentImgFileName = overlayImage.src.split("/").slice(-1)[0];
+            return imgs.filter(img => {
+                const iteratedImgFileName = img.src.split("/").slice(-1)[0];
+                return iteratedImgFileName === currentImgFileName;
+            })[0];
+        };
+
+        const getMaxImgIndex = () => {
+            let highest = 0;
+            imgs.forEach(img => {
+                const imgName = img.src.split("/").slice(-1)[0];
+                const imgNumber = parseInt(imgName.match(/\d+/)[0]);
+                highest = imgNumber > highest ? imgNumber : highest;
+            });
+            
+            return highest;
+        };
+
+        const getCurrentImgIndex = () => {
+            const currentImgFileName = overlayImage.src.split("/").slice(-1)[0];
+            let number = parseInt(currentImgFileName.match(/\d+/)[0]);
+            return number;
+        };
 
         const [leftArrow, rightArrow] = document.getElementsByClassName("arrow-button");
         
         leftArrow.addEventListener("click", () => {
-            const newIndex = currentUsedImgIndex - 1 < 0
-                ? imageItems.length - 1
-                : currentUsedImgIndex - 1;
-            overlayImage.src = `/img/photos/image${newIndex + 1}.jpg`;
-            currentUsedImgIndex = newIndex;
+            const currentIndex = getCurrentImgIndex();
+            const newIndex = currentIndex - 1 < 1 ? getMaxImgIndex() : currentIndex - 1;
+
+            overlayImage.src = `/img/photos/image${newIndex}.jpg`;
         });
 
         rightArrow.addEventListener("click", () => {
-            const newIndex = currentUsedImgIndex + 1 > imageItems.length - 1
+            const currentIndex = getCurrentImgIndex();
+            const newIndex = currentIndex + 1 > imageItems.length - 1
                 ? 0
-                : currentUsedImgIndex + 1;
+                : currentIndex + 1;
             overlayImage.src = `/img/photos/image${newIndex + 1}.jpg`;
             currentUsedImgIndex = newIndex;
         });
@@ -118,7 +138,4 @@
 {{- else }}
 <script>const LANGUAGE = "English"</script>
 {{- end }}
-<script src="/js/submit-form.js"></script>
-<script src="/js/price-calculator.js"></script>
-
 </html>
