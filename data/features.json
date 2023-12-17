@@ -22,8 +22,13 @@
     },
     {
       "title": "Arbeitsplatz vorhanden",
-      "description": "Wir bieten ruhigen Arbeitsplatz mit Bildschirm, Tastatur und Mouse.",
+      "description": "Wir bieten einen ruhigen Arbeitsplatz mit Bildschirm, Tastatur und Mouse.",
       "img": "workplace.svg"
+    },
+    {
+      "title": "Parkplatz",
+      "description": "Ein extra Parkplatz direkt vor der Ferienwohnung.",
+      "img": "car.svg"
     }
   ],
 
