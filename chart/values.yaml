@@ -5,6 +5,12 @@ labels:
   - wini-gasthaus-website
 resourcesName: wini-gasthaus-website
 
+backend:
+  resourcesName: wini-gasthaus-backend-service
+  path: /api/
+  port: 80
+  host: gasthaus-wini.com
+
 image:
   repository: dominikhillmann/wini-gasthaus-website
   pullPolicy: IfNotPresent
