@@ -28,3 +28,13 @@ spec:
                 port:
                   number: {{ $port }}
     {{- end }}
+    - host: {{ .Values.backend.host }}
+      http:
+        paths:
+          - path: {{ .Values.backend.path }}
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.backend.resourcesName }}
+                port:
+                  number: {{ .Values.backend.port }}
