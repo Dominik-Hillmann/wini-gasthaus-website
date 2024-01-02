@@ -93,25 +93,27 @@
         </div>
 
           <div class="input">
-            <div id="dates-selector-wrapper" class="flex justify-start py-2">
-              <div class="flex p-4 mr-2 input bg-gray-200 border border-gray-200 p-4 focus:outline-none focus:bg-white focus:border-gray-500">
+            <div id="guests-selector-wrapper" class="flex justify-start py-2">
+              <div class="flex p-4 mr-2 input bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
                 <label for="num-adults">{{ if $isGerman }}Anzahl Erwachsene:{{ else }}Number of adults:{{ end }}&nbsp;</label>
                 <input
                   type="number"
                   id="num-adults"
                   name="num-adults"
+                  size="3"
                   value="1"
                   min="1"
                   max="6"
                   required
                   class="bg-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
               </div>
-              <div class="flex p-4 ml-2 mr-2 input bg-gray-200 border border-gray-200 p-4 focus:outline-none focus:bg-white focus:border-gray-500">
+              <div class="flex p-4 ml-2 mr-2 input bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
                 <label for="num-children">{{ if $isGerman }}Anzahl Kinder:{{ else }}Number of children:{{ end }}&nbsp; </label>
                 <input
                   type="number"
                   id="num-children"
                   name="num-children"
+                  size="3"
                   value="0"
                   min="0"
                   max="2"
@@ -119,20 +121,80 @@
                   class="bg-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
               </div>
               <div class="flex p-4 ml-2 input bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
-                <label for="pets-included">{{ if $isGerman }}Haustiere:{{ else }}Pets:{{ end }}&nbsp;</label>
+                <label for="num-pets">{{ if $isGerman }}Anzahl Haustiere:{{ else }}Number of pets:{{ end }}&nbsp;</label>
                 <input
-                  type="checkbox"
-                  id="pets-included"
-                  name="pets-included"
+                  type="number"
+                  id="num-pets"
+                  name="num-pets"
+                  size="3"
+                  value="0"
+                  min="0"
+                  max="2"
                   class="bg-gray-200 focus:outline-none focus:bg-white focus:border-gray-500">
               </div>
             </div>
           </div>
 
         <div class="input">
-          <input type="text" placeholder="Name" name="name"
-            class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
-            required>
+          <div id="names-wrapper" class="flex">
+            <div class="flex-1 mr-2">
+              <input
+                  type="text"
+                  size="15"
+                  placeholder="Vorname"
+                  name="firstname"
+                  id="firstname"
+                  class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                  required>
+            </div>
+
+            <div class="flex-1 ml-2">
+              <input
+                  type="text"
+                  size="15"
+                  placeholder="Nachname"
+                  name="lastname"
+                  id="lastname"
+                  class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                  required>
+            </div>
+          </div>
+        </div>
+
+        <div class="input">
+          <div id="address-wrapper" class="flex">
+            <div class="input mr-2">
+              <input
+                  type="text"
+                  placeholder={{ if $isGerman }}"Adresszeile"{{ else }}"Address"{{ end }}
+                  name="address"
+                  id="address"
+                  class="w-full p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                  required>
+            </div>
+
+            <div class="input mx-2">
+              <input
+                  size="9"
+                  class="p-4 m-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                  type="text"
+                  placeholder={{ if $isGerman }}"PLZ"{{ else }}"Postal code"{{ end }}
+                  name="postal-code"
+                  id="postal-code"
+                  required>
+            </div>
+
+            <div class="input ml-2">
+              <input
+                  size="16"
+                  class="p-4 m-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                  type="text"
+                  placeholder={{ if $isGerman }}"Land"{{ else }}"Country"{{ end }}
+                  name="country"
+                  id="country"
+                  required>
+            </div>
+          </div>
         </div>
 
         <div class="input">
