@@ -2,7 +2,14 @@
  * This script is inteded to display the map on the landing page of this website.
  */
 
-map = new OpenLayers.Map("mapdiv");
+map = new OpenLayers.Map("mapdiv", {
+    controls: [
+        new OpenLayers.Control.Navigation({
+            zoomWheelEnabled: false  // Disable zooming with the mouse wheel
+        }),
+        // Add any other controls you need here
+    ]
+});
 map.addLayer(new OpenLayers.Layer.OSM());
 
 var lonLat = new OpenLayers.LonLat(11.45123536890872, 52.062377175318154)
