@@ -1,201 +1,148 @@
 /* TODO remove font and replace with locally stored font. */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
 
-:root {
-  --calendar-bg-color: rgb(229, 231, 235); /*bg-gray-200*/
-  --calendar-font-color: #404040;
-  --weekdays-border-bottom-color: #404040;
-  --calendar-date-hover-color: #505050;
-  --calendar-current-date-color: rgb(204, 204, 204);
-  --calendar-today-color: #7acaf0;
-  --calendar-booked-color: rgb(255, 138, 138);
-  --calendar-selected-color: green;
-  --calendar-today-innerborder-color: transparent;
-  --calendar-nextprev-bg-color: transparent;
-  --next-prev-arrow-color: #404040;
-  --calendar-border-radius: 16px;
-  --calendar-prevnext-date-color: #484848
-}
-
 * {
   padding: 0;
   margin: 0;
 }
 
+@charset "utf-8";
+.multiCalendarWidget {
+  max-width: 1000px !important;
+  width: 100% !important;
+  display: inline-table !important;
+  background: rgb(229 231 235) !important;
+  color: #616262 !important;
+  margin: 0 !important;
+  padding-top: 20px !important;
+  border-radius: 10px;
+}
+.multiCalendarWidget .fullCalendar {
+  width: 50% !important;
+  float: left !important;
+}
+.multiCalendarWidget .fullCalendar.smallDevices {
+  width: 100% !important;
+  float: left !important;
+}
+.multiCalendarWidget a {
+  text-decoration: none !important;
+}
+.multiCalendarWidget h2 {
+  font-size: 20px !important;
+  line-height: 1.25em !important;
+  margin: .25em 0 !important;
+}
+.multiCalendarWidget h3 {
+  font-size: 1.5em !important;
+  line-height: 1em !important;
+  margin: .33em 0 !important;
+}
+.multiCalendarWidget .singleCalendarWidget,
+.multiCalendarWidget .singleCalendarWidget h2 {
+  text-align: center !important;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+.multiCalendarWidget .singleCalendarWidget .header,
+.multiCalendarWidget .singleCalendarWidget h2 .header {
+  position: relative !important;
+}
+.multiCalendarWidget .singleCalendarWidget .header div,
+.multiCalendarWidget .singleCalendarWidget h2 .header div {
+  position: relative !important;
+}
+.multiCalendarWidget .singleCalendarWidget h2,
+.multiCalendarWidget .singleCalendarWidget h2 h2 {
+  text-transform: uppercase !important;
+}
+.multiCalendarWidget .singleCalendarWidget table,
+.multiCalendarWidget .singleCalendarWidget h2 table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+}
+.multiCalendarWidget .singleCalendarWidget table thead,
+.multiCalendarWidget .singleCalendarWidget h2 table thead {
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+}
+.multiCalendarWidget .singleCalendarWidget table tbody,
+.multiCalendarWidget .singleCalendarWidget h2 table tbody {
+  color: #7c8a95 !important;
+}
+.multiCalendarWidget .singleCalendarWidget table tr,
+.multiCalendarWidget .singleCalendarWidget h2 table tr {
+  width: 100% !important;
+}
+.multiCalendarWidget .singleCalendarWidget table td,
+.multiCalendarWidget .singleCalendarWidget h2 table td {
+  padding: 0 !important;
+  box-sizing: border-box;
+  height: 66px !important;
+  line-height: 66px !important;
+  text-align: center !important;
+}
+.multiCalendarWidget .singleCalendarWidget table td.normal,
+.multiCalendarWidget .singleCalendarWidget h2 table td.normal {
+  background-color: #ffbfbf !important;
+}
+.multiCalendarWidget .singleCalendarWidget table td.arrival,
+.multiCalendarWidget .singleCalendarWidget h2 table td.arrival {
+  background: linear-gradient(to right bottom, rgb(229 231 235 / 80%) 50%, #ffbfbf 50%) !important;
+}
+.multiCalendarWidget .singleCalendarWidget table td.departure,
+.multiCalendarWidget .singleCalendarWidget h2 table td.departure {
+  background: linear-gradient(to right bottom, #ffbfbf 50%, rgb(229 231 235 / 80%) 50%) !important;
+}
+.multiCalendarWidget .singleCalendarWidget table td.current-day,
+.multiCalendarWidget .singleCalendarWidget h2 table td.current-day {
+  border: 2px solid gray !important;
+}
+.multiCalendarWidget .btn-prev,
+.multiCalendarWidget .btn-next {
+  border-radius: 50% !important;
+  color: #cbd1d2 !important;
+  height: 32px !important;
+  font-size: 16px !important;
+  line-height: 28px !important;
+  margin: -12px !important;
+  position: absolute !important;
+  top: 32% !important;
+  width: 32px !important;
+}
+.multiCalendarWidget .btn-prev.smallDevices,
+.multiCalendarWidget .btn-next.smallDevices {
+  top: -20px !important;
+}
+.multiCalendarWidget .btn-prev {
+  left: 26px !important;
+}
+.multiCalendarWidget .btn-prev.smallDevices {
+  left: 16px !important;
+}
+.multiCalendarWidget .btn-next {
+  right: 26px !important;
+}
+.multiCalendarWidget .btn-next.first {
+  display: none !important;
+}
+.multiCalendarWidget .btn-next.smallDevices {
+  right: 16px !important;
+}
+.multiCalendarWidget .btn-next.smallDevices.first {
+  display: inherit !important;
+}
+.multiCalendarWidget .btn-next.smallDevices.last {
+  display: none !important;
+}
+.multiCalendarWidget .logo {
+  float: right;
+  margin: 15px 20px 15px 15px;
+}
+
 #smoobuApartment1855499de, #smoobuApartment1855499en {
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
-
-#prose  {
-  margin-bottom: 1em;
-}
-
-/* TODO: clean up */
-.calendar {
-  font-family: 'IBM Plex Sans', sans-serif;
-  position: relative;
-  max-width: 400px;
-  /*change as per your design need */
-  min-width: 320px;
-  background: var(--calendar-bg-color);
-  color: var(--calendar-font-color);
-  margin: 20px auto;
-  box-sizing: border-box;
-  overflow: hidden;
-  font-weight: normal;
-  border-radius: var(--calendar-border-radius);
-}
-
-.calendar-inner {
-  padding: 10px 10px;
-}
-
-.calendar .calendar-inner .calendar-body {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  text-align: center;
-}
-
-.calendar .calendar-inner .calendar-body div {
-  padding: 4px;
-  min-height: 30px;
-  line-height: 30px;
-  border: 1px solid transparent;
-  margin: 10px 2px 0px;
-}
-
-.calendar .calendar-inner .calendar-body div:nth-child(-n+7) {
-  border: 1px solid transparent;
-  border-bottom: 1px solid var(--weekdays-border-bottom-color);
-}
-
-.calendar .calendar-inner .calendar-body div:nth-child(-n+7):hover {
-  border: 1px solid transparent;
-  border-bottom: 1px solid var(--weekdays-border-bottom-color);
-}
-
-.calendar .calendar-inner .calendar-body div>a {
-  color: var(--calendar-font-color);
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-}
-
-.calendar .calendar-inner .calendar-body div:hover {
-  border: 1px solid var(--calendar-date-hover-color);
-  border-radius: 4px;
-}
-
-.calendar .calendar-inner .calendar-body div.empty-dates:hover {
-  border: 1px solid transparent;
-}
-
-.calendar .calendar-inner .calendar-controls {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.calendar .calendar-inner .calendar-today-date {
-  display: grid;
-  text-align: center;
-  cursor: pointer;
-  margin: 3px 0px;
-  background: var(--calendar-current-date-color);
-  padding: 8px 0px;
-  border-radius: 10px;
-  width: 80%;
-  margin: auto;
-}
-
-.calendar .calendar-inner .calendar-controls .calendar-year-month {
-  display: flex;
-  min-width: 100px;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.calendar .calendar-inner .calendar-controls .calendar-next {
-  text-align: right;
-}
-
-.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-year-label,
-.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-month-label {
-  font-weight: 500;
-  font-size: 20px;
-}
-
-.calendar .calendar-inner .calendar-body .calendar-today {
-  background: var(--calendar-today-color);
-  border-radius: 4px;
-}
-
-.calendar-booked {
-  background: var(--calendar-booked-color);
-  border-radius: 4px;
-}
-
-.calendar-selected {
-  background: var(--calendar-selected-color);
-  border-radius: 4px;
-}
-
-
-.calendar .calendar-inner .calendar-body .calendar-today:hover {
-  border: 1px solid transparent;
-}
-
-.calendar .calendar-inner .calendar-body .calendar-today a {
-  outline: 2px solid var(--calendar-today-innerborder-color);
-}
-
-.calendar .calendar-inner .calendar-controls .calendar-next a,
-.calendar .calendar-inner .calendar-controls .calendar-prev a {
-  color: var(--calendar-font-color);
-  font-family: arial, consolas, sans-serif;
-  font-size: 26px;
-  text-decoration: none;
-  padding: 4px 12px;
-  display: inline-block;
-  background: var(--calendar-nextprev-bg-color);
-  margin: 10px 0 10px 0;
-}
-
-.calendar .calendar-inner .calendar-controls .calendar-next a svg,
-.calendar .calendar-inner .calendar-controls .calendar-prev a svg {
-  height: 20px;
-  width: 20px;
-}
-
-.calendar .calendar-inner .calendar-controls .calendar-next a svg path,
-.calendar .calendar-inner .calendar-controls .calendar-prev a svg path {
-  fill: var(--next-prev-arrow-color);
-}
-
-.calendar .calendar-inner .calendar-body .prev-dates,
-.calendar .calendar-inner .calendar-body .next-dates {
-  color: var(--calendar-prevnext-date-color);
-}
-
-.calendar .calendar-inner .calendar-body .prev-dates:hover,
-.calendar .calendar-inner .calendar-body .next-dates:hover {
-  border: 1px solid transparent;
-  pointer-events: none;
-}
-
-/* #dates-selector-wrapper div.input {
-  display: inline-block;
-  margin-bottom: 7px;
-}
-
-#dates-selector-wrapper div.input label {
-  color: gray;
-}
-
-#dates-selector-wrapper div.input:first-child {
-  float: left;
-} 
-
-#dates-selector-wrapper div.input:last-child {
-  float: right;
-}  */
-
