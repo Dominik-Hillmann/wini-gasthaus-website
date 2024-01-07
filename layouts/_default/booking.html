@@ -141,7 +141,7 @@
               <input
                   type="text"
                   size="15"
-                  placeholder="Vorname"
+                  placeholder={{ if $isGerman }}"Vorname"{{ else }}"First name"{{ end }}
                   name="firstname"
                   id="firstname"
                   class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
@@ -152,7 +152,7 @@
               <input
                   type="text"
                   size="15"
-                  placeholder="Nachname"
+                  placeholder={{ if $isGerman }}"Nachname"{{ else }}"Last name"{{ end }}
                   name="lastname"
                   id="lastname"
                   class="p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
