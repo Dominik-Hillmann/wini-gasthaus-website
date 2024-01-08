@@ -12,7 +12,7 @@
     },
     {
       "title": "Haustiere auf Anfrage",
-      "description": "Auch Haustiere haben Platz bei uns. Der Aufenthalt kostet EUR 10 je Aufenthalt & Tier.",
+      "description": "Auch Haustiere haben Platz bei uns. Der Aufenthalt kostet EUR 10 je Nacht & Tier.",
       "img": "dog.svg"
     },
     {
@@ -22,8 +22,13 @@
     },
     {
       "title": "Arbeitsplatz vorhanden",
-      "description": "Wir bieten ruhigen Arbeitsplatz mit Bildschirm, Tastatur und Mouse.",
+      "description": "Wir bieten einen ruhigen Arbeitsplatz mit Bildschirm, Tastatur und Mouse.",
       "img": "workplace.svg"
+    },
+    {
+      "title": "Parkplatz",
+      "description": "Ein extra Parkplatz direkt vor der Ferienwohnung.",
+      "img": "car.svg"
     }
   ],
 
@@ -40,7 +45,7 @@
     },
     {
       "title": "Pets upon request",
-      "description": "Pets are welcome in our flat. The stay costs EUR 10 per stay & per pet.",
+      "description": "Pets are welcome in our flat. The stay costs EUR 10 per night & per pet.",
       "img": "dog.svg"
     },    
     {
@@ -52,6 +57,11 @@
       "title": "Workspace available",
       "description": "We offer a quiet workspace with a monitor, keyboard, and mouse.",
       "img": "workplace.svg"
-    }    
+    },
+    {
+      "title": "Parking",
+      "description": "Parking available in front of the vacation home.",
+      "img": "car.svg"
+    }
   ]
 }
