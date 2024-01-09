@@ -27,20 +27,97 @@
 
     <h1 class="title text-5xl font-bold mb-3">{{.Title}}</h1>
 
-    <p>{{ .Content }}</p>
-
     <div class="content py-1">{{.Content}}</div>
 
     <div class="scroll-top rounded-full">
         <span class="icon-keyboard_arrow_up text-2xl"></span>
     </div>
 
-
+    {{- if $isGerman }}
+    <h2 class="title text-3xl my-5" directory="outside">Außenansicht</h2>
+    {{- else }}
+    <h2 class="title text-3xl my-5" directory="outside">View from the outside</h2>
+    {{- end }}
     <div class="image-grid">
-        {{ range sort (readDir "static/img/photos/") "Name" }}
+        {{ range sort (readDir "static/img/photos/outside/") "Name" }}
         {{ if (findRE ".jpg$" .Name) }}
         <div class="image-item">
-            <img src="/img/photos/{{ .Name }}">
+            <img src="/img/photos/outside/{{ .Name }}" directory="outside">
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+
+    {{- if $isGerman }}
+    <h2 class="title text-3xl my-5" directory="living-room">Wohnzimmer</h2>
+    {{- else }}
+    <h2 class="title text-3xl my-5" directory="living-room">Living room</h2>
+    {{- end }}
+    <div class="image-grid">
+        {{ range sort (readDir "static/img/photos/living-room/") "Name" }}
+        {{ if (findRE ".jpg$" .Name) }}
+        <div class="image-item">
+            <img src="/img/photos/living-room/{{ .Name }}" directory="living-room">
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+
+    {{- if $isGerman }}
+    <h2 class="title text-3xl my-5" directory="bedroom-ground">Schlafzimmer im Erdgeschoss</h2>
+    {{- else }}
+    <h2 class="title text-3xl my-5" directory="bedroom-ground">Bedroom on the first floor</h2>
+    {{- end }}
+    <div class="image-grid">
+        {{ range sort (readDir "static/img/photos/bedroom-ground/") "Name" }}
+        {{ if (findRE ".jpg$" .Name) }}
+        <div class="image-item">
+            <img src="/img/photos/bedroom-ground/{{ .Name }}" directory="bedroom-ground">
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+
+    {{- if $isGerman }}
+    <h2 class="title text-3xl my-5" directory="bedroom-basement">Schlafzimmer im Untergeschoss</h2>
+    {{- else }}
+    <h2 class="title text-3xl my-5" directory="bedroom-basement">Bedroom in the basement</h2>
+    {{- end }}
+    <div class="image-grid">
+        {{ range sort (readDir "static/img/photos/bedroom-basement/") "Name" }}
+        {{ if (findRE ".jpg$" .Name) }}
+        <div class="image-item">
+            <img src="/img/photos/bedroom-basement/{{ .Name }}" directory="bedroom-basement">
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+
+    {{- if $isGerman }}
+    <h2 class="title text-3xl my-5" directory="bathroom">Badezimmer</h2>
+    {{- else }}
+    <h2 class="title text-3xl my-5" directory="bathroom">Bathroom</h2>
+    {{- end }}
+    <div class="image-grid">
+        {{ range sort (readDir "static/img/photos/bathroom/") "Name" }}
+        {{ if (findRE ".jpg$" .Name) }}
+        <div class="image-item">
+            <img src="/img/photos/bathroom/{{ .Name }}" directory="bathroom">
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+
+    {{- if $isGerman }}
+    <h2 class="title text-3xl my-5" directory="kitchen">Küche</h2>
+    {{- else }}
+    <h2 class="title text-3xl my-5" directory="kitchen">Kitchen</h2>
+    {{- end }}
+    <div class="image-grid">
+        {{ range sort (readDir "static/img/photos/kitchen/") "Name" }}
+        {{ if (findRE ".jpg$" .Name) }}
+        <div class="image-item">
+            <img src="/img/photos/kitchen/{{ .Name }}" directory="kitchen">
         </div>
         {{ end }}
         {{ end }}
@@ -67,12 +144,11 @@
             const img =  item.getElementsByTagName("img")[0];
             const splitImgUrl = img.src.split("/");
             const imgFileName = splitImgUrl[splitImgUrl.length - 1];
+            const associatedDir = item.querySelector("img").getAttribute("directory")
 
             item.addEventListener("click", () => {
-                overlayImage.src = `/img/photos/${imgFileName}`;
+                overlayImage.src = `/img/photos/${associatedDir}/${imgFileName}`;
                 overlay.style.display = 'block';
-                getCurrentImgIndex()
-                // currentUsedImgIndex = index;
                 currentlyUsedImg = img;
             });
         });
@@ -106,25 +182,32 @@
 
         const getCurrentImgIndex = () => {
             const currentImgFileName = overlayImage.src.split("/").slice(-1)[0];
-            let number = parseInt(currentImgFileName.match(/\d+/)[0]);
-            return number;
+            return parseInt(currentImgFileName.match(/\d+/)[0]);
         };
 
         const [leftArrow, rightArrow] = document.getElementsByClassName("arrow-button");
+
+        const getDirAssociatedWithIndex = index => {
+            const splitPath = [...document.getElementsByClassName("image-item")]
+                .map(element => element.getElementsByTagName("img")[0].src)
+                .findLast(name => name.includes(`image${index}.jpg`))
+                .split("/")
+
+            return splitPath[splitPath.length - 2];
+        };
         
         leftArrow.addEventListener("click", () => {
             const currentIndex = getCurrentImgIndex();
             const newIndex = currentIndex - 1 < 1 ? getMaxImgIndex() : currentIndex - 1;
-
-            overlayImage.src = `/img/photos/image${newIndex}.jpg`;
+            const associatedDir = getDirAssociatedWithIndex(newIndex);
+            overlayImage.src = `/img/photos/${associatedDir}/image${newIndex}.jpg`;
         });
 
         rightArrow.addEventListener("click", () => {
             const currentIndex = getCurrentImgIndex();
-            const newIndex = currentIndex + 1 > imageItems.length - 1
-                ? 0
-                : currentIndex + 1;
-            overlayImage.src = `/img/photos/image${newIndex + 1}.jpg`;
+            const newIndex = (currentIndex + 1 > imageItems.length - 1 ? 0 : currentIndex + 1) + 1;
+            const associatedDir = getDirAssociatedWithIndex(newIndex);
+            overlayImage.src = `/img/photos/${associatedDir}/image${newIndex}.jpg`;
             currentUsedImgIndex = newIndex;
         });
     </script>
