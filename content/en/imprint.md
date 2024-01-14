@@ -8,7 +8,7 @@ author: Dominik Hillmann
 
 - **Name:** Hillmann, Fred
 - **Adresse:** Heinrich-Heine-Weg 17
-- **PLZ:** 39164
+- **PLZ:** 39164 Wanzleben-Börde
 - **E-Mail:** [info@gasthaus-wini.com](mailto:info@gasthaus-wini.com)
 
 ## Umsatzsteuer-ID
