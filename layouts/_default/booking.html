@@ -173,9 +173,19 @@
                   required>
             </div>
 
+            <div class="input mr-2 ml-2">
+              <input
+                type="text"
+                placeholder={{ if $isGerman }}"Wohnort"{{ else }}"Residence"{{ end }}
+                name="city"
+                id="city"
+                class="w-full p-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
+                required>
+            </div>
+
             <div class="input mx-2">
               <input
-                  size="9"
+                  size="7"
                   class="p-4 m-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
                   type="text"
                   placeholder={{ if $isGerman }}"PLZ"{{ else }}"Postal code"{{ end }}
@@ -186,7 +196,7 @@
 
             <div class="input ml-2">
               <input
-                  size="16"
+                  size="10"
                   class="p-4 m-4 bg-gray-200 border border-gray-200 focus:outline-none focus:bg-white focus:border-gray-500"
                   type="text"
                   placeholder={{ if $isGerman }}"Land"{{ else }}"Country"{{ end }}

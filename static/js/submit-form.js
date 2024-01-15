@@ -12,6 +12,7 @@ document.getElementById("contact").addEventListener("submit", function (event) {
         lastName: formData.get("lastname"),
         address: formData.get("address"),
         postalCode: formData.get("postal-code"),
+        city: formData.get("city"),
         country: formData.get("country"),
         emailAddress: formData.get("mail"),
         messageBody: formData.get("message"),
