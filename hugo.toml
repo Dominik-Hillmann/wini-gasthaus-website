@@ -81,12 +81,12 @@ defaultContentLanguageInSubdir = false
   
   [[menu.footer]]
     name = "Impressum"
-    url = "/imprint"
+    url = "/imprint/"
     weight = 3
 
   [[menu.footer]]
     name = "Datenschutz"
-    url = "/datenschutz"
+    url = "/datenschutz/"
     weight = 4
 
   # [[menu.footer]]
@@ -170,5 +170,5 @@ defaultContentLanguageInSubdir = false
 
         [[languages.en.menu.footer]]
           name = "Datenschutz"
-          url = "/en/datenschutz"
+          url = "/en/datenschutz/"
           weight = 4
