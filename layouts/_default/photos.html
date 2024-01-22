@@ -27,16 +27,16 @@
 
     <h1 class="title text-5xl font-bold mb-3">{{.Title}}</h1>
 
-    <div class="content py-1">{{.Content}}</div>
+    <div class="content py-1 my-5">{{.Content}}</div>
 
     <div class="scroll-top rounded-full">
         <span class="icon-keyboard_arrow_up text-2xl"></span>
     </div>
 
     {{- if $isGerman }}
-    <h2 class="title text-3xl my-5" directory="outside">Außenansicht</h2>
+    <h2 class="py-6 title text-3xl" directory="outside">Außenansicht</h2>
     {{- else }}
-    <h2 class="title text-3xl my-5" directory="outside">View from the outside</h2>
+    <h2 class="py-6 title text-3xl" directory="outside">View from the outside</h2>
     {{- end }}
     <div class="image-grid">
         {{ range sort (readDir "static/img/photos/outside/") "Name" }}
@@ -49,9 +49,9 @@
     </div>
 
     {{- if $isGerman }}
-    <h2 class="title text-3xl my-5" directory="living-room">Wohnzimmer</h2>
+    <h2 class="py-6 title text-3xl" directory="living-room">Wohnzimmer</h2>
     {{- else }}
-    <h2 class="title text-3xl my-5" directory="living-room">Living room</h2>
+    <h2 class="py-6 title text-3xl" directory="living-room">Living room</h2>
     {{- end }}
     <div class="image-grid">
         {{ range sort (readDir "static/img/photos/living-room/") "Name" }}

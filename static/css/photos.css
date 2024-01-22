@@ -47,6 +47,8 @@ body {
     display: block;
     width: 3%;
     fill: white;
+    z-index: 3;
+    box-shadow: #00c300;
 }
 
 .arrow-button {
@@ -69,6 +71,6 @@ body {
     top: 20px;
     right: 20px;
     color: #fff;
-    font-size: 24px;
+    font-size: 50px;
     cursor: pointer;
 }
