@@ -4,6 +4,8 @@ date: 2023-06-06
 author: Dominik Hillmann
 ---
 
+---
+
 Liebe Gäste!
 Herzlich willkommen!
 
@@ -22,15 +24,17 @@ Sie finden außerdem die gängigsten Gewürze, etwas Salz, etwas Zucker im Gefri
 Kaffeefilter für die Filtermaschine (keinen Kaffee), etwas Kaffeesahne und einige Kaffeekapseln für die 
 Nespresso-Maschine vor.
 Sofern Sie Ihr Haustier begleitet, können Sie die zwei Futternäpfe auf der Terrasse nutzen.
-Die nachstehendeHausordnung soll eine Hilfe für einen harmonischen Aufenthalt sein.
-Außerdem haben wir einige Regel aufgeführt, bei denen wir um Einhaltung bitten.
+Die nachstehende Hausordnung soll eine Hilfe für einen harmonischen Aufenthalt sein.
+Zudem haben wir einige Regeln aufgeführt, bei denen wir um Einhaltung bitten.
 Durch eine ordentliche Behandlung der Wohnung helfen Sie uns, auch in Zukunft Ihnen und anderen Gästen 
 zufriedenstellende Räumlichkeiten anbieten zu können.
 Mit der Buchung der Ferienwohnung wird die nachfolgende Hausordnung von Ihnen anerkannt.
 Wir wünschen Ihnen einen angenehmen Aufenthalt, Entspannung, viele Erlebnisse und eine gute Zeit in der vielseitigen
 Magdeburger Börde!
 
-Ihre Gastgeberfamilie Hillmann
+Ihre Gastgeber
+
+Familie Hillmann
 
 ## Hausordnung
 
@@ -58,12 +62,12 @@ Außerdem steht Ihnen ein Föhn zur Verfügung (im Badschrank).
 ### Beschädigungen
 
 Niemand beschädigt absichtlich Sachen.
-Dennoch kann es vorkommen, dass etwas kaputtgeht.
-Wir würden uns freuen, wenn Sie den entstandenen Schaden sofort mitteilen, und wir diesen nicht erst nachIhrer Abreise 
+Dennoch kann es vorkommen, dass etwas kaputt geht.
+Wir würden uns freuen, wenn Sie den entstandenen Schaden sofort mitteilen, und wir diesen nicht erst nach Ihrer Abreise 
 bei der Endreinigung feststellen.
 So können wir schnell reagieren und den Schaden im Idealfall noch während Ihres Aufenthalts für Ihre Nutzung, aber
 zumindest rechtzeitig für die nachfolgenden Gäste instand setzen.
-Bitte nehmen Sie hierzu per Mail oder Telefon (siehe vorne) mit uns Kontakt auf.
+Bitte nehmen Sie hierzu per Mail mit uns Kontakt auf.
 Als Mieter haften Sie für Beschädigungen inHöhe des Wiederbeschaffungswertes.
 
 ### Lüften
@@ -89,13 +93,13 @@ Zusätzliche Müllbeutel finden Sie in der Küchenzeile unter der Spüle bzw. im
 In die Küchenspüle, die Toilette, das Waschbecken und die Dusche dürfen keine Abfälle, Essensreste, schädliche
 Flüssigkeiten oder Ähnliches entsorgt werden!
 Vermeiden Sie alles, was zu Verstopfungen der Leitungen führen kann.
-Alle Hygieneartikel müssen im Restmüll entsorgt werden!
+__ALLE__ Hygieneartikel müssen im Restmüll entsorgt werden!
 
 ### Reinigung
 
 Sollte Ihnen einmal ein Missgeschick (extremer Schmutz, Flüssigkeiten auf dem Boden oder Arbeitsflächen usw.) passieren,
 bitten wir Sie dies sofort zu beseitigen.
-Eimer, Wischlappen und Staubsauger finden Sie inder Küchenzeile ganz rechts unten.
+Eimer, Wischlappen und Staubsauger finden Sie in der Küchenzeile ganz rechts unten.
 Wir bitten Sie, die Wohnung bei Abreise besenrein zu hinterlassen, und alles benutzte Geschirr wieder sauber in die 
 Schränke einzuräumen. 
 Ihren Müll bringen Sie bitte in die auf der Terrasse befindlichen Behälter; Glas kann im Mülleimer der Küche verbleiben.
@@ -107,7 +111,7 @@ Die Kosten für eine normale Endreinigung ist im Mietpreis enthalten.
 
 Im Sinne einer guten Nachbarschaft bitten wir Sie, die öffentlichen Ruhezeiten wie Mittags-, Nacht- und Sonntagsruhe 
 einzuhalten.
-Auch im Haus selbst sollte aus Rücksicht zwischen 22:00 Uhr und 6:00 Uhr Ruhegehalten werden.
+Auch im Haus selbst sollte aus Rücksicht zwischen 22:00 Uhr und 6:00 Uhr Ruhe gehalten werden.
 Das Feiern oder Durchführen von Veranstaltungen ist nicht erlaubt!
 Das kommerzielle Filmen und Fotografieren ist ebenfalls nicht erlaubt!
 
@@ -136,7 +140,7 @@ Wir bitten diese bei schlechtem Wetter, aber generell über Nacht in die Wohnung
 ### Haustiere
 
 Das Mitbringen von stubenreinen Haustieren ist nur nach vorheriger Anfrage gegen Aufpreis erlaubt.
-Wir bitten darauf zu achten, dass Ihre Haustiere nicht die Sitzgelegenheiten, Betten und Möbelbenutzen!
+Wir bitten darauf zu achten, dass Ihre Haustiere nicht die Sitzgelegenheiten, Betten und Möbel benutzen!
 
 ### Parkmöglichkeiten
 
@@ -150,12 +154,13 @@ Dieser ist kostenfrei.
 
 ### Hausrecht/Sonstiges
 
-In der Wohnung sind Decken (auch in der Couch –- rechte Seite hochheben) und Kissen vorhanden.
+In der Wohnung sind Decken (auch in der Couch – rechte Seite hochheben) und Kissen vorhanden.
 Diese sind nur für den In-House-Bereich vorgesehen und wir bitten Sie, diese nicht auf Ihre Tagesausflüge mitzunehmen 
 oder auf der Terrasse als Picknick-Decken zu verwenden.
 Wir stellen Ihnen für die Dauer Ihres Aufenthaltes Geschirrtücher, Handtücher und Bettwäsche zur Verfügung.
 Bei Bedarf finden Sie zusätzliche Handtücher oben im Badschrank, und Geschirrtücher im Hängeschrank der Küchenzeile.
 Bitte werfen Sie vor Ihrer Abreise die gebrauchten Handtücher in den Wäschesammler (Schlafzimmer).
+
 Das Verdunklungsrollo im oberen Schlafzimmer wird elektrisch betrieben.
 Am Fenster hängt hierfür eine Fernbedienung.
 Mit den Pfeiltasten fahren Sie das Rollo hoch und runter.
@@ -171,7 +176,7 @@ Ein Feuerlöscher befindet sich in der Küchenzeile ganz rechts unten.
 Die Wohnung wird schlüssellos vermietet.
 Sie erhalten rechtzeitig vor Ihrer Ankunft einen 4-stelligen Code, der für die Dauer Ihres Aufenthalts Gültigkeit hat.
 Diesen geben Sie am Eingangstor und an der Haustür ein und Sie haben jetzt ein paar Sekunden Zeit, um die Türen
-durch dagegen drücken zu öffnen.
+durch dagegendrücken zu öffnen.
 Bitte merken Sie sich diesen Code und geben ihn Dritten nicht bekannt.
 Alternativ finden Sie im Flur RFID-Transponder am Schlüsselbrett vor, die Sie zum schnelleren Öffnen der Türen benutzen
 können.
@@ -182,8 +187,10 @@ Sollten Sie den Code vergessen haben oder Hilfe benötigen rufen Sie uns an.
 
 Wir haften nicht für Ihre Wertgegenstände.
 Ein Safe befindet sich nicht in der Ferienwohnung.
-An- und AbreiseDie Anreise ist ab 14:00 Uhr möglich.
 
+### An- und Abreise
+
+Die Anreise ist ab 14:00 Uhr möglich.
 Am Abreisetag bitten wir Sie, die Wohnung bis spätestens 11:00 Uhr in wie oben beschriebenem Zustand freizugeben.
 
 ### Stornierungen (bei Buchung über unsere Webseite)
@@ -211,4 +218,4 @@ Bei mehrfachem Verstoß gegen die Hausordnung und die Mietbedingungen können wi
 der Gast hat die Wohnung sofort zu verlassen.
 Ein Anspruch auf Rückerstattung des Mietpreises besteht in diesem Fall nicht.
 
-*Stand: Dezember2023*
+*Stand: Dezember 2023*
