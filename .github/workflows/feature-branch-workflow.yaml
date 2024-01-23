@@ -1,0 +1,81 @@
+name: Feature branch workflow
+
+on:
+  push:
+    branches:
+      - feat**
+      - fix**
+      - build**
+      - chore**
+      - ci**
+      - docs**
+      - style**
+      - refactor**
+      - perf**
+      - test**
+
+jobs:
+  feature-branch-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Set up Docker buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Build Docker image
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+        run: |
+          image_name="$DOCKERHUB_USERNAME/wini-gasthaus-website:$(cat VERSION)-stage"
+          docker build -t "${image_name}" .
+
+      - name: Check VERSION file changes
+        run: |
+          git fetch origin main:main
+          if ! git diff --exit-code HEAD main -- VERSION; then
+            echo "VERSION file changed."
+          else
+            echo "VERSION file has not changed. Failing the workflow."
+            exit 1
+          fi
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PUSH_TOKEN }}
+
+      - name: Push staging version to Docker Hub
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+        run: |
+          image_name="$DOCKERHUB_USERNAME/wini-gasthaus-website:$(cat VERSION)-stage"
+          docker push "${image_name}"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Setup Node.js for processing npm dependencies
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21
+
+      - name: Process PostCSS
+        run: npm i
+
+      - name: Setup HUGO
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.115.4"
+
+      - name: Test build of the HUGO page
+        run: hugo --minify --buildDrafts
