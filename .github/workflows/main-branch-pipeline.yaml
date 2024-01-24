@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  feature-branch-tests:
+  main-branch-deployment:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
