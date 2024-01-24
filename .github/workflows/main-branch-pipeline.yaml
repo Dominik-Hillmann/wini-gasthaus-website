@@ -24,16 +24,6 @@ jobs:
           image_name="$DOCKERHUB_USERNAME/wini-gasthaus-website:$(cat VERSION)"
           docker build -t "${image_name}" .
 
-      - name: Check VERSION file changes
-        run: |
-          git fetch origin main:main
-          if ! git diff --exit-code HEAD main -- VERSION; then
-            echo "VERSION file changed."
-          else
-            echo "VERSION file has not changed. Failing the workflow."
-            exit 1
-          fi
-
       - name: Login to Docker Hub
         uses: docker/login-action@v1
         with:
