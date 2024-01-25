@@ -27,4 +27,9 @@ Das zukünftige Intel-Gewerbegebiet und die Autobahn A 14 liegt mit 5 Minuten Fa
 Einkaufsmöglichkeiten sowie Bus und Natur sind fußläufig zu erreichen.
 In der Nähe befinden sich der Sülze- und der Elberadweg sowie die Burg Wanzleben.
 
+Sie finden uns hier:
+
+- Heinrich-Heine-Weg 17
+- 39164 Stadt Wanzleben-Börde
+
 Hier nochmal unsere Highlights auf einem Blick:
