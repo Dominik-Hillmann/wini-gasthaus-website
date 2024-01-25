@@ -26,5 +26,11 @@ The future Intel industrial area and the A14 highway are practically on our door
 Shopping facilities, as well as bus connections and nature, are within walking distance.
 Nearby, you will find the Sülze and Elbe bike paths and the Wanzleben Castle.
 
+You can find out holiday home here:
+
+- Heinrich-Heine-Weg 17
+- 39164 Stadt Wanzleben-Börde
+- Germany
+
 Here are our highlights at a glance:
 
