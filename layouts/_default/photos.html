@@ -34,9 +34,9 @@
     </div>
 
     {{- if $isGerman }}
-    <h2 class="py-6 title text-3xl" directory="outside">Außenansicht</h2>
+    <h2 class="py-6 title text-3xl" directory="outside">Außen-/Eingangsbereich</h2>
     {{- else }}
-    <h2 class="py-6 title text-3xl" directory="outside">View from the outside</h2>
+    <h2 class="py-6 title text-3xl" directory="outside">Outside view and entrance</h2>
     {{- end }}
     <div class="image-grid">
         {{ range sort (readDir "static/img/photos/outside/") "Name" }}
