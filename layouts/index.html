@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 
+{{ $isGerman := eq .Language.LanguageName "Deutsch" }}
+
 <head>
     {{- partial "head.html" . -}}
     <meta name="description" content="{{ .Site.Params.homepage_meta_tags.meta_og_description }}" />
@@ -46,7 +48,11 @@
     </div>
 
     <div class="mx-auto my-10 max-w-6xl">
+        {{- if $isGerman }}
         <h2 class="text-4xl ml-2">Bewertungen</h2>
+        {{- else }}
+        <h2 class="text-4xl ml-2">Reviews</h2>
+        {{- end }}
         {{- partial "recent.html" . -}}
     </div>
 
