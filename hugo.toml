@@ -40,7 +40,7 @@ defaultContentLanguageInSubdir = false
 
   [[menu.main]]
     identifier = "booking"
-    name = "Buchung"
+    name = "Buchung & Kontakt"
     url = "/booking/"
     weight = 1
   
@@ -124,7 +124,7 @@ defaultContentLanguageInSubdir = false
         # Header menu
         [[languages.en.menu.main]]
           identifier = "booking"
-          name = "Booking"
+          name = "Booking & Contact"
           url = "/en/booking/"
           weight = 1
           
