@@ -94,21 +94,6 @@
     </div>
 
     {{- if $isGerman }}
-    <h2 class="title text-3xl my-5" directory="bathroom">Badezimmer</h2>
-    {{- else }}
-    <h2 class="title text-3xl my-5" directory="bathroom">Bathroom</h2>
-    {{- end }}
-    <div class="image-grid">
-        {{ range sort (readDir "static/img/photos/bathroom/") "Name" }}
-        {{ if (findRE ".jpg$" .Name) }}
-        <div class="image-item">
-            <img src="/img/photos/bathroom/{{ .Name }}" directory="bathroom">
-        </div>
-        {{ end }}
-        {{ end }}
-    </div>
-
-    {{- if $isGerman }}
     <h2 class="title text-3xl my-5" directory="kitchen">Küche</h2>
     {{- else }}
     <h2 class="title text-3xl my-5" directory="kitchen">Kitchen</h2>
@@ -118,6 +103,21 @@
         {{ if (findRE ".jpg$" .Name) }}
         <div class="image-item">
             <img src="/img/photos/kitchen/{{ .Name }}" directory="kitchen">
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+
+    {{- if $isGerman }}
+    <h2 class="title text-3xl my-5" directory="bathroom">Badezimmer</h2>
+    {{- else }}
+    <h2 class="title text-3xl my-5" directory="bathroom">Bathroom</h2>
+    {{- end }}
+    <div class="image-grid">
+        {{ range sort (readDir "static/img/photos/bathroom/") "Name" }}
+        {{ if (findRE ".jpg$" .Name) }}
+        <div class="image-item">
+            <img src="/img/photos/bathroom/{{ .Name }}" directory="bathroom">
         </div>
         {{ end }}
         {{ end }}
