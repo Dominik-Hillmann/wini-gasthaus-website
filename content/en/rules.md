@@ -9,17 +9,23 @@ We are pleased that you have chosen our apartment in Wanzleben and would like to
 We want you to feel comfortable and rest.
 Our guest apartment has been renovated in 2022/2023 and lovingly furnished, and we hope you will find everything you
 need.
-If you miss anything or if you need help, please contact us with without hesitation.
+If you miss anything or if you need help, please contact us without hesitation.
 We can be reached by email ([info@gasthaus-wini.com](mailto:info@gasthaus-wini.com)).
 All things that are in the holiday apartment or on the terrace can be used as you wish but please be careful with the 
-furnishings and inventory and treat the rental property with care.In addition to the accommodation costs, the rental
+furnishings and inventory and treat the rental property with care. In addition to the accommodation costs, the rental
 price includes bed linen, towels, tea towels, dishwashing and cleaning agents, toilet paper, hand soap, garbage bags and
-a hair dryer for the duration of your stay.You will also find most common spices, some salt, some sugar, a few ice cubes
-in the freezer, coffee some filters for the filter machine (wihtout coffee) and some coffee capsules for the Nespresso
+a hair dryer for the duration of your stay. You will also find most common spices, some salt, some sugar, a few ice cubes
+in the freezer, coffee some filters for the filter machine (without coffee) and some coffee capsules for the Nespresso
 machine.
 
 If you are accompanied by your pet, you can use the two feeding bowls on the terrace.The following house rules are
-intended to ensure a harmonious stay. We have also listed a few rules that we kindly ask you to comply with.By treating the apartment properly, you will help us to be able to offer you and other guests a satisfactory stay in the future.By booking the holiday apartment, you accept the following house rules.We wish you a pleasant stay, relaxation, many experiences and a good time in the varied Magdeburger Börde!Your hosts, the Hillmann family
+intended to ensure a harmonious stay. We have also listed a few rules that we kindly ask you to comply with.
+By treating the apartment properly, you will help us to be able to offer you and other guests a satisfactory stay in the
+future.
+By booking the holiday apartment, you accept the following house rules.We wish you a pleasant stay, relaxation, many
+experiences and a good time in the varied Magdeburger Börde!
+
+Your hosts, the Hillmann family
 
 ## House rules
 
@@ -86,7 +92,7 @@ The cost of an usual final cleaning is included in the rental price, of course.
 
 In the interest of being a good neighbor, we ask you to observe the public rest periods such as lunch, night and Sunday
 rest.
-Out of consideration, silence should also be kept in the house between 10 p.m. and 6 a.m.Celebrating or holding events
+Out of consideration, silence should also be kept in the house between 10 p.m. and 6 a.m. Celebrating or holding events
 is not allowed!Commercial filming and photography is also not allowed!
 
 ### Internet/WiFi
