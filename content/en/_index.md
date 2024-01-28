@@ -24,7 +24,8 @@ The Harz Mountains are only 30-45 minutes away, while you can reach the A2 highw
 
 The future Intel industrial area and the A14 highway are practically on our doorstep, only a 5-minute drive away.
 Shopping facilities, as well as bus connections and nature, are within walking distance.
-Nearby, you will find the Sülze and Elbe bike paths and the Wanzleben Castle.
+Nearby, you will find the Sülze and Elbe bike paths and the Wanzleben Castle
+([Straße der Romanik](https://www.strassederromanik.de/en/index.php)).
 
 You can find out holiday home here:
 
