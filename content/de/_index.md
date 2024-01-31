@@ -23,7 +23,7 @@ In nur 20 Minuten erreichen Sie die Innenstadt von Magdeburg, die Motorsport Are
 Salzelmen.
 Der Harz ist nur 30-45 Minuten entfernt, während Sie die Autobahn A 2 in nur 12 Minuten erreichen.
 
-Das zukünftige Intel-Gewerbegebiet und die Autobahn A 14 liegt mit 5 Minuten Fahrzeit quasi vor der Haustür.
+Das zukünftige Intel-Gewerbegebiet und die Autobahn A 14 liegen mit 5 Minuten Fahrzeit quasi vor der Haustür.
 Einkaufsmöglichkeiten sowie Bus und Natur sind fußläufig zu erreichen.
 In der Nähe befinden sich der Sülze- und der Elberadweg sowie die Burg Wanzleben
 ([Straße der Romanik](https://www.strassederromanik.de/de/detail/burg-wanzleben.html)).
