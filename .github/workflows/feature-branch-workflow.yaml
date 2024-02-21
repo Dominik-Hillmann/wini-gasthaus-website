@@ -16,9 +16,25 @@ on:
       - dependabot**
 
 jobs:
-  test-deployment:
+  check-is-version-updated:
     runs-on: ubuntu-latest
     needs: build
+    steps:
+      - name: Check VERSION file changes
+        run: |
+          git fetch origin main:main
+          if ! git diff --exit-code HEAD main -- VERSION; then
+            echo "VERSION file changed."
+          else
+            echo "VERSION file has not changed. Failing the workflow."
+            exit 1
+          fi
+
+  test-deployment:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+      - check-is-version-updated
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -35,15 +51,9 @@ jobs:
           image_name="$DOCKERHUB_USERNAME/wini-gasthaus-website:$(cat VERSION)-stage"
           docker build -t "${image_name}" .
 
-      - name: Check VERSION file changes
-        run: |
-          git fetch origin main:main
-          if ! git diff --exit-code HEAD main -- VERSION; then
-            echo "VERSION file changed."
-          else
-            echo "VERSION file has not changed. Failing the workflow."
-            exit 1
-          fi
+      - name: Check status of job checking VERSION file update
+        if: ${{ needs.check-is-version-updated.result != 'success' }}
+        run: echo "VERSION file update check failed."
 
       - name: Login to Docker Hub
         uses: docker/login-action@v1
