@@ -20,6 +20,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
       - name: Check VERSION file changes
         run: |
           git fetch origin main:main
@@ -36,6 +41,7 @@ jobs:
       - build
       - check-is-version-updated
     steps:
+      
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
@@ -50,10 +56,6 @@ jobs:
         run: |
           image_name="$DOCKERHUB_USERNAME/wini-gasthaus-website:$(cat VERSION)-stage"
           docker build -t "${image_name}" .
-
-      - name: Check status of job checking VERSION file update
-        if: ${{ needs.check-is-version-updated.result != 'success' }}
-        run: echo "VERSION file update check failed."
 
       - name: Login to Docker Hub
         uses: docker/login-action@v1

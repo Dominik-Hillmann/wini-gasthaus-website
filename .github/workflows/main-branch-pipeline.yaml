@@ -9,8 +9,7 @@ jobs:
   main-branch-deployment:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           submodules: true
 
@@ -44,3 +43,24 @@ jobs:
         with:
           args: |
             helm upgrade --install wini-gasthaus-website chart/ --install -n wini-prod
+
+  create-version-tag:
+    runs-on: ubuntu-latest
+    needs: main-branch-deployment
+    permissions:
+      contents: write
+    steps:
+
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Create version tag
+        env:
+          GIT_MAIL_ADDRESS: "${{ secrets.GIT_MAIL_ADDRESS }}"
+        run: |
+          version="v$(cat VERSION)"
+          git config --local user.email "$GIT_MAIL_ADDRESS"
+          git config --local user.name "Dominik-Hillmann"
+          git tag "$version"
+          git push --tags
