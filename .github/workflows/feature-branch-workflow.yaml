@@ -16,6 +16,29 @@ on:
       - dependabot**
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Setup Node.js for processing npm dependencies
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21
+
+      - name: Process PostCSS
+        run: npm i
+
+      - name: Setup HUGO
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.115.4"
+
+      - name: Test build of the HUGO page
+        run: hugo --minify --buildDrafts
+
   check-is-version-updated:
     runs-on: ubuntu-latest
     needs: build
@@ -41,7 +64,7 @@ jobs:
       - build
       - check-is-version-updated
     steps:
-      
+
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
@@ -69,27 +92,3 @@ jobs:
         run: |
           image_name="$DOCKERHUB_USERNAME/wini-gasthaus-website:$(cat VERSION)-stage"
           docker push "${image_name}"
-
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-
-      - name: Setup Node.js for processing npm dependencies
-        uses: actions/setup-node@v4
-        with:
-          node-version: 21
-
-      - name: Process PostCSS
-        run: npm i
-
-      - name: Setup HUGO
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "0.115.4"
-
-      - name: Test build of the HUGO page
-        run: hugo --minify --buildDrafts
