@@ -14,7 +14,7 @@ backend:
 image:
   repository: dominikhillmann/wini-gasthaus-website
   pullPolicy: IfNotPresent
-  tag: "0.2.30"
+  tag: "0.2.31"
 
 service:
   type: ClusterIP
