@@ -9,6 +9,8 @@ Dear guests, we are delighted that you would like to visit Gasthaus Wini for one
 An estimate of the price of the booking will be displayed right above the 'Send' button when entering the
 booking information.
 
+If calendar fields are marked red or half red, they are not available for booking.
+
 A successful message does not mean that the inn is booked. 
 Please allow us one day to verify your reservation and send an invoice to the email address you 
 provided.
