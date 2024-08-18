@@ -27,7 +27,7 @@ const updatePrice = () => {
         numPets: `${numPets}`
     });
 
-    const insertPriceOrError = price => {
+    const insertPriceOnSuccess = price => {
         if (LANGUAGE === "Deutsch") {
             const numNightsOutput = numNights <= 1 ? "einer" : `${numNights}`;
 
@@ -69,13 +69,32 @@ const updatePrice = () => {
         } else console.error(`No translation found for language '${LANGUAGE}'.`);
     }
 
+    let resetTimeout;
+
+    const greenPriceLightUp = () => {
+
+        priceOutput.classList.remove("priceFetchFailure");
+        priceOutput.classList.add("priceFetchSuccess");
+        clearTimeout(resetTimeout);
+        resetTimeout = setTimeout(() => priceOutput.classList.remove("priceFetchSuccess"), 3000);
+    };
+
+    const redPriceLightUp = () => {
+        priceOutput.classList.remove("priceFetchSuccess");
+        priceOutput.classList.add("priceFetchFailure");
+        clearTimeout(resetTimeout);
+        resetTimeout = setTimeout(() => priceOutput.classList.remove("priceFetchFailure"), 3000);
+    };
+
     fetch(`${baseUrl}?${queryParams.toString()}`, { method: "GET" })
         .then(response => response.json())
         .then(data => {
             if (data.price) {
-                insertPriceOrError(data.price);
+                insertPriceOnSuccess(data.price);
+                greenPriceLightUp();
             } else {
                 priceOutput.innerHTML = LANGUAGE === "Deutsch" ? data["message-german"] : data["message-english"];
+                redPriceLightUp();
             }
         })
         .catch(error => console.error(error));
