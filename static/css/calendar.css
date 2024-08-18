@@ -146,3 +146,22 @@
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
+#price-output {
+  padding: 16px;
+  font-weight: bold;
+  background-color: #E5E7EB;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  margin: 5px 0 15px 0;
+}
+
+/* Styles for success and failure */
+.priceFetchSuccess {
+  background-color: green !important;
+  color: white;
+}
+
+.priceFetchFailure {
+  background-color: red !important;
+  color: white;
+}

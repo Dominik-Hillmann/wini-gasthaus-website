@@ -135,3 +135,5 @@ public/
 
 # IntelliJ
 .idea/
+
+.DS_Store
