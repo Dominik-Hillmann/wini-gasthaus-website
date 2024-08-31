@@ -4,6 +4,7 @@ backend:
   host: gasthaus-wini.com
 
 ingress:
+  tlsSecretName: wini-gasthaus-website
   clusterIssuer: letsencrypt-prod
   hosts:
     - gasthaus-wini.com

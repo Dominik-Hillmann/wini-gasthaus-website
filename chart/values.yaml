@@ -21,7 +21,4 @@ service:
   type: ClusterIP
   port: 80
 
-ingress:
-  tlsSecretName: wini-gasthaus-website
-
 resources: {}
