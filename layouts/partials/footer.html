@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="copy pl-8 py-5 bg-tlgray-700 text-white text-md">
-        {{ $version := readFile "VERSION" }}
+        {{ $version := getenv "VERSION" | default "local" }}
         &copy; {{site.Title}} {{now.Month}} {{ now.Year }}. All Rights Reserved. v{{ $version }}.
     </div>
 </footer>
