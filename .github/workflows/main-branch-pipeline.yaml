@@ -112,12 +112,15 @@ jobs:
           KUBE_CONFIG_DATA: ${{ secrets.KUBECONFIG_B64 }}
         with:
           args: |
+            full_version=$(cat FULL_VERSION)
             helm upgrade \
               --values chart/values.yaml \
               --values chart/values-$ENV_NAME.yaml \
               --install "$REPO_NAME" chart/ \
               --install \
-              --namespace wini-$ENV_NAME
+              --namespace wini-$ENV_NAME \
+              --set image.tag="$full_version" \
+              --set appVersion="$full_version"
 
   create-version-tag:
     name: Set a tag with new version
