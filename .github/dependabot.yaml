@@ -1,16 +1,45 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: "/"
+    directory: /
     schedule:
       interval: daily
+      time: "05:00"
+      timezone: Europe/Berlin
+    labels:
+      - Dependabot
+      - npm
 
   - package-ecosystem: docker
-    directory: "/"
+    directory: /
     schedule:
       interval: daily
+      time: "05:00"
+      timezone: Europe/Berlin
+    labels:
+      - Dependabot
+      - Docker
 
   - package-ecosystem: gitsubmodule
     directory: /themes
     schedule:
       interval: daily
+      time: "05:00"
+      timezone: Europe/Berlin
+    labels:
+      - Dependabot
+      - Git submodule
+
+  - package-ecosystem: github-actions
+    directory: /.github
+    schedule:
+      interval: daily
+      time: "05:00"
+      timezone: Europe/Berlin
+    labels:
+      - Dependabot
+      - GitHub Actions
+    groups:
+      all-updates:
+        patterns:
+          - "*"
