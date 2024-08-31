@@ -1,0 +1,20 @@
+name: Uninstall the deployment in the staging environment
+
+on:
+  workflow_dispatch:
+  # This allows the workflow to be triggered manually from the GitHub Actions UI
+
+env:
+  REPO_NAME: wini-gasthaus-website
+
+jobs:
+  test-uninstallation:
+    name: Uninstall K8s staging environment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Uninstallation
+        uses: wahyd4/kubectl-helm-action@master
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBECONFIG_B64 }}
+        with:
+          args: helm uninstall "$REPO_NAME"

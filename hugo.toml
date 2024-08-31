@@ -172,3 +172,6 @@ defaultContentLanguageInSubdir = false
           name = "Datenschutz"
           url = "/en/datenschutz/"
           weight = 4
+
+[security.funcs]
+getenv = ['^HUGO_', '^CI$', '^VERSION$']
