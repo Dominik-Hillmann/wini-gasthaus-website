@@ -15,11 +15,71 @@ on:
       - test**
       - dependabot**
 
+env:
+  REPO_NAME: wini-gasthaus-website
+  REPO_OWNER: Dominik-Hillmann
+  ENV_NAME: test
+
 jobs:
-  build:
+  calculate-version:
+    name: Calculate version
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get PR number if it exists
+        env:
+          COMMIT_SHA: ${{ github.sha }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Commit SHA: $COMMIT_SHA"
+          reply=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/commits/$COMMIT_SHA/pulls")
+          echo "Reply: $reply"    
+          pr_number=$(echo "$reply" | jq -r '.[0].number')
+          echo "PR_NUMBER=$pr_number" >> $GITHUB_ENV
+          echo "PR_NUMBER=$pr_number"
+
+      - name: Calculate version
+        run: |
+          major_minor=$(cat VERSION)
+          version="$major_minor.$PR_NUMBER"
+          echo "Calculated version: $version"
+          echo "$version" > FULL_VERSION
+
+      - name: Upload variable as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: FULL_VERSION
+          path: FULL_VERSION
+
+  gitleaks:
+    name: Look for leaked secrets with Gitleaks
+    permissions:
+      contents: read
+      pull-requests: read
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch all history for all branches and tags
+          fetch-depth: 0
+
+      - name: Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build:
+    name: Run build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           submodules: true
 
@@ -29,7 +89,7 @@ jobs:
           node-version: 21
 
       - name: Process PostCSS
-        run: npm i
+        run: npm install
 
       - name: Setup HUGO
         uses: peaceiris/actions-hugo@v2
@@ -39,49 +99,35 @@ jobs:
       - name: Test build of the HUGO page
         run: hugo --minify --buildDrafts
 
-  check-is-version-updated:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-
-      - uses: actions/checkout@v2
-        with:
-          submodules: true
-
-      - name: Check VERSION file changes
-        run: |
-          git fetch origin main:main
-          if ! git diff --exit-code HEAD main -- VERSION; then
-            echo "VERSION file changed."
-          else
-            echo "VERSION file has not changed. Failing the workflow."
-            exit 1
-          fi
-
-  test-deployment:
+  create-staging-image:
+    name: Build staging image
     runs-on: ubuntu-latest
     needs:
+      - calculate-version
       - build
-      - check-is-version-updated
     steps:
-
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           submodules: true
 
+      - name: Download FULL_VERSION file
+        uses: actions/download-artifact@v3
+        with:
+          name: FULL_VERSION
+          path: .
+
       - name: Set up Docker buildx
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v3
 
       - name: Build Docker image
-        env:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
-          image_name="$DOCKERHUB_USERNAME/wini-gasthaus-website:$(cat VERSION)-stage"
-          docker build -t "${image_name}" .
+          FULL_VERSION=$(cat FULL_VERSION)
+          image_name="${{ secrets.DOCKERHUB_USERNAME }}/$REPO_NAME:$FULL_VERSION-stage"
+          docker build -t "$image_name" .
 
       - name: Login to Docker Hub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PUSH_TOKEN }}
@@ -90,5 +136,68 @@ jobs:
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
-          image_name="$DOCKERHUB_USERNAME/wini-gasthaus-website:$(cat VERSION)-stage"
-          docker push "${image_name}"
+          FULL_VERSION=$(cat FULL_VERSION)
+          image_name="$DOCKERHUB_USERNAME/$REPO_NAME:$FULL_VERSION-stage"
+          docker push "$image_name"
+
+  test-deployment:
+    name: Deployment to K8s staging environment
+    runs-on: ubuntu-latest
+    needs: create-staging-image
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Download FULL_VERSION file
+        uses: actions/download-artifact@v3
+        with:
+          name: FULL_VERSION
+          path: .
+
+      - name: Deploy to cluster
+        uses: wahyd4/kubectl-helm-action@master
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBECONFIG_B64 }}
+        with:
+          args: |
+            full_version=$(cat FULL_VERSION)
+            helm upgrade \
+              --values chart/values.yaml \
+              --values chart/values-test.yaml \
+              "$REPO_NAME" chart/ \
+              --install \
+              --namespace "wini-$ENV_NAME" \
+              --set image.tag="$full_version" \
+              --set appVersion="$full_version"
+
+  vulnerability_scan:
+    name: Vulnerability scan by Trivy
+    runs-on: ubuntu-latest
+    needs: create-staging-image
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download FULL_VERSION file
+        uses: actions/download-artifact@v3
+        with:
+          name: FULL_VERSION
+          path: .
+
+      - name: Set FULL_VERSION to be used in next step
+        run: echo "FULL_VERSION=$(cat FULL_VERSION)" >> $GITHUB_ENV
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.REPO_NAME }}:${{ env.FULL_VERSION }}-stage
+          format: table
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
+        env:
+          TRIVY_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          TRIVY_PASSWORD: ${{ secrets.DOCKERHUB_PUSH_TOKEN }}

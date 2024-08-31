@@ -9,32 +9,19 @@ backend:
   resourcesName: wini-gasthaus-backend-service
   path: /api/
   port: 80
-  host: gasthaus-wini.com
 
 image:
   repository: dominikhillmann/wini-gasthaus-website
   pullPolicy: IfNotPresent
-  tag: "0.2.42"
+  # The image tag will always be determined in the pipeline.
+  # It will follow the convention "$(< VERSION).$PR_NUMBER$([ $is_test_env ] && echo -stage)"
+  tag: "TBD"
 
 service:
   type: ClusterIP
   port: 80
 
 ingress:
-  clusterIssuer: letsencrypt-prod
   tlsSecretName: wini-gasthaus-website
-  hosts:
-    - gasthaus-wini.com
-    - www.gasthaus-wini.com
 
 resources: {}
-  # We usually recommend not to specify default resources and to leave this as a conscious
-  # choice for the user. This also increases chances charts run on environments with little
-  # resources, such as Minikube. If you do want to specify resources, uncomment the following
-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  # limits:
-  #   cpu: 100m
-  #   memory: 128Mi
-  # requests:
-  #   cpu: 100m
-  #   memory: 128Mi

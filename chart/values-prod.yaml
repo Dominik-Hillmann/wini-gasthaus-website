@@ -1,1 +1,10 @@
-# TODO: will be differantiated later
+environment: prod
+
+backend:
+  host: gasthaus-wini.com
+
+ingress:
+  clusterIssuer: letsencrypt-prod
+  hosts:
+    - gasthaus-wini.com
+    - www.gasthaus-wini.com

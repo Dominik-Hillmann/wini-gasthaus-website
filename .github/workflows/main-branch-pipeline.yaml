@@ -5,44 +5,90 @@ on:
     branches:
       - main
 
+env:
+  REPO_NAME: wini-gasthaus-website
+  REPO_OWNER: Dominik-Hillmann
+  ENV_NAME: prod
+
 jobs:
-  promote-image:
+  calculate-version:
+    name: Calculate version
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - uses: actions/checkout@v2
+      - name: Calculate version
+        env:
+          COMMIT_SHA: ${{ github.sha }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Commit SHA: $COMMIT_SHA"
+          reply=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/commits/$COMMIT_SHA/pulls")
+          echo "Reply: $reply"          
+
+          pr_number=$(echo "$reply" | jq -r '.[0].number')
+          major_minor=$(cat VERSION)
+          version="$major_minor.$pr_number"
+          echo "Calculated version: $version"
+          echo "$version" > FULL_VERSION
+
+      - name: Upload variable as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: FULL_VERSION
+          path: FULL_VERSION
+
+  promote-image:
+    name: Promote staging image to production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           submodules: true
 
-      - name: Read VERSION file
-        run: echo "VERSION=$(cat VERSION)" >> $GITHUB_ENV
+      - name: Download FULL_VERSION file
+        uses: actions/download-artifact@v3
+        with:
+          name: FULL_VERSION
+          path: .
+
+      - name: Read FULL_VERSION file
+        run: echo "VERSION=$(cat FULL_VERSION)" >> $GITHUB_ENV
 
       - name: Login to Docker Hub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PUSH_TOKEN }}
 
       - name: Pull staging image
-        run: docker pull "${{ secrets.DOCKERHUB_USERNAME }}/wini-gasthaus-website:${{ env.VERSION }}-stage"
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+        run: docker pull "$DOCKERHUB_USERNAME/$REPO_NAME:$VERSION-stage"
 
       - name: Tag image for production
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
           docker tag \
-            "${{ secrets.DOCKERHUB_USERNAME }}/wini-gasthaus-website:${{ env.VERSION }}-stage" \
-            "${{ secrets.DOCKERHUB_USERNAME }}/wini-gasthaus-website:${{ env.VERSION }}"
+            "$DOCKERHUB_USERNAME/$REPO_NAME:$VERSION-stage" \
+            "$DOCKERHUB_USERNAME/$REPO_NAME:$VERSION"
 
       - name: Push production image to Docker Hub
-        run: docker push "${{ secrets.DOCKERHUB_USERNAME }}/wini-gasthaus-website:${{ env.VERSION }}"
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+        run: docker push "$DOCKERHUB_USERNAME/$REPO_NAME:$VERSION"
 
       - name: Delete staging image from Docker Hub
         env:
           DOCKER_HUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKERHUB_DELETE_TOKEN }}
         run: |
-          image_name="$DOCKER_HUB_USERNAME/wini-gasthaus-website"
-          version="${{ env.VERSION }}"
-          staging_tag="$version-stage"
+          image_name="$DOCKER_HUB_USERNAME/$REPO_NAME"
+          staging_tag="$VERSION-stage"
           
           hub_token=$(curl -s -H "Content-Type: application/json" -X POST -d "{\"username\": \"$DOCKER_HUB_USERNAME\", \"password\": \"$DOCKER_HUB_ACCESS_TOKEN\"}" https://hub.docker.com/v2/users/login/ | jq -r .token)
           
@@ -52,10 +98,10 @@ jobs:
             https://hub.docker.com/v2/repositories/$image_name/tags/$staging_tag/
 
   main-branch-deployment:
+    name: Deploy to production
     runs-on: ubuntu-latest
     needs: promote-image
     steps:
-
       - uses: actions/checkout@v2
         with:
           submodules: true
@@ -66,25 +112,31 @@ jobs:
           KUBE_CONFIG_DATA: ${{ secrets.KUBECONFIG_B64 }}
         with:
           args: |
-            helm upgrade --install wini-gasthaus-website chart/ --install -n wini-prod
+            helm upgrade --install "$REPO_NAME" chart/ --install -n wini-$ENV_NAME
 
   create-version-tag:
+    name: Set a tag with new version
     runs-on: ubuntu-latest
     needs: main-branch-deployment
     permissions:
       contents: write
     steps:
-
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           submodules: true
+
+      - name: Download FULL_VERSION file
+        uses: actions/download-artifact@v3
+        with:
+          name: FULL_VERSION
+          path: .
 
       - name: Create version tag
         env:
           GIT_MAIL_ADDRESS: "${{ secrets.GIT_MAIL_ADDRESS }}"
         run: |
-          version="v$(cat VERSION)"
+          version="v$(cat FULL_VERSION)"
           git config --local user.email "$GIT_MAIL_ADDRESS"
-          git config --local user.name "Dominik-Hillmann"
+          git config --local user.name "$REPO_OWNER"
           git tag "$version"
           git push --tags

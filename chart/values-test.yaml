@@ -1,1 +1,9 @@
-# TODO: will be differantiated later
+environment: test
+
+backend:
+  host: staging.gasthaus-wini.com
+
+ingress:
+  clusterIssuer: letsencrypt-test
+  hosts:
+    - staging.gasthaus-wini.com
