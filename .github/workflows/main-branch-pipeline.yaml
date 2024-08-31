@@ -112,7 +112,12 @@ jobs:
           KUBE_CONFIG_DATA: ${{ secrets.KUBECONFIG_B64 }}
         with:
           args: |
-            helm upgrade --install "$REPO_NAME" chart/ --install -n wini-$ENV_NAME
+            helm upgrade \
+              --values chart/values.yaml \
+              --values chart/values-$ENV_NAME.yaml \
+              --install "$REPO_NAME" chart/ \
+              --install \
+              --namespace wini-$ENV_NAME
 
   create-version-tag:
     name: Set a tag with new version

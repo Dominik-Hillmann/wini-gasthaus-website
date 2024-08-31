@@ -4,6 +4,7 @@ backend:
   host: staging.gasthaus-wini.com
 
 ingress:
+  tlsSecretName: wini-gasthaus-website-test
   clusterIssuer: letsencrypt-test
   hosts:
     - staging.gasthaus-wini.com
