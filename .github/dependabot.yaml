@@ -21,7 +21,7 @@ updates:
       - Docker
 
   - package-ecosystem: gitsubmodule
-    directory: /themes
+    directory: /
     schedule:
       interval: daily
       time: "05:00"
