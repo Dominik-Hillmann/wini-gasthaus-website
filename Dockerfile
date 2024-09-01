@@ -1,5 +1,9 @@
 FROM betterweb/hugo:extended-0.115.4-18-1.21.5 as build
 
+# VERSION is to be passed from outside during build so that it can be displayed in the footer.
+ARG VERSION_OUTER
+ENV VERSION=${VERSION_OUTER}
+
 WORKDIR /app
 COPY . /app
 RUN npm install

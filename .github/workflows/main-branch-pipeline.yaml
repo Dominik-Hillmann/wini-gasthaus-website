@@ -88,7 +88,10 @@ jobs:
           image_name="$DOCKER_HUB_USERNAME/$REPO_NAME"
           staging_tag="$VERSION-stage"
           
-          hub_token=$(curl -s -H "Content-Type: application/json" -X POST -d "{\"username\": \"$DOCKER_HUB_USERNAME\", \"password\": \"$DOCKER_HUB_ACCESS_TOKEN\"}" https://hub.docker.com/v2/users/login/ | jq -r .token)
+          hub_token=$(curl -s -H "Content-Type: application/json" -X POST \
+            -d "{\"username\": \"$DOCKER_HUB_USERNAME\", \"password\": \"$DOCKER_HUB_ACCESS_TOKEN\"}" \
+            https://hub.docker.com/v2/users/login/ \
+            | jq -r .token)
           
           curl -i -X DELETE \
             -H "Accept: application/json" \
