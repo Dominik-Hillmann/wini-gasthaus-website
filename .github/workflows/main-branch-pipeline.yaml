@@ -42,6 +42,7 @@ jobs:
 
   promote-image:
     name: Promote staging image to production
+    needs: calculate-version
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
