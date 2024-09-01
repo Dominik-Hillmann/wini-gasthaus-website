@@ -113,12 +113,13 @@ jobs:
         with:
           args: |
             full_version=$(cat FULL_VERSION)
+            echo "Deploy to environment wini-$ENV_NAME using values.yaml and values-$ENV_NAME.yaml."            
             helm upgrade \
               --values chart/values.yaml \
               --values chart/values-$ENV_NAME.yaml \
-              --install "$REPO_NAME" chart/ \
+              "$REPO_NAME" chart/ \
               --install \
-              --namespace wini-$ENV_NAME \
+              --namespace "wini-$ENV_NAME" \
               --set image.tag="$full_version" \
               --set appVersion="$full_version"
 
