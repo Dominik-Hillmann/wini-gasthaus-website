@@ -113,7 +113,7 @@ jobs:
         with:
           args: |
             full_version=$(cat FULL_VERSION)
-            echo "Deploy to environment wini-$ENV_NAME using values.yaml and values-$ENV_NAME.yaml."            
+            echo "Deploying to environment wini-$ENV_NAME using values.yaml and values-$ENV_NAME.yaml at version $full_version."            
             helm upgrade \
               --values chart/values.yaml \
               --values chart/values-$ENV_NAME.yaml \
