@@ -44,6 +44,9 @@ jobs:
     name: Promote staging image to production
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Download FULL_VERSION file
         uses: actions/download-artifact@v3
         with:
