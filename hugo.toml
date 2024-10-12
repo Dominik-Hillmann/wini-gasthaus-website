@@ -174,4 +174,4 @@ defaultContentLanguageInSubdir = false
           weight = 4
 
 [security.funcs]
-getenv = ['^HUGO_', '^CI$', '^VERSION$']
+getenv = ['^HUGO_', '^CI$', '^VERSION$', '^SHORT_COMMIT_HASH$']
