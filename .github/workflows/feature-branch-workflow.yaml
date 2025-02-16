@@ -94,7 +94,7 @@ jobs:
       - name: Setup HUGO
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.115.4"
+          hugo-version: "0.121.1"
 
       - name: Test build of the HUGO page
         run: hugo --minify --buildDrafts
