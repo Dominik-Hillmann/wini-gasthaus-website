@@ -1,4 +1,4 @@
-FROM betterweb/hugo:extended-0.115.4-18-1.21.5 as build
+FROM betterweb/hugo:extended-0.121.1-20-1 as build
 
 # VERSION is to be passed from outside during build so that it can be displayed in the footer.
 ARG VERSION_OUTER
