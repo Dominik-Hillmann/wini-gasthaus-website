@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "tailwindcss": "4.1.1"
+    "tailwindcss": "4.1.2"
   },
   "dependencies": {
     "postcss-cli": "^11.0.1"
