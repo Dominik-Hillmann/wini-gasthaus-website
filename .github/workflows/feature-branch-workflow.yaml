@@ -150,6 +150,7 @@ jobs:
           image_name="$DOCKERHUB_USERNAME/$REPO_NAME:$VERSION-stage"
           docker push "$image_name"
 
+  # Note: no automatic uninstallation of the chart because the "test" is taking a look at the website.
   test-deployment:
     name: Deployment to K8s staging environment
     runs-on: ubuntu-latest
@@ -177,7 +178,7 @@ jobs:
           args: |
             helm upgrade \
               --values chart/values.yaml \
-              --values chart/values-test.yaml \
+              --values chart/values-$ENV_NAME.yaml \
               "$REPO_NAME" chart/ \
               --install \
               --namespace "wini-$ENV_NAME" \
