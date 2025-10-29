@@ -12,7 +12,7 @@ COPY . /app
 RUN npm install
 RUN hugo
 
-FROM nginx:1.29.2-alpine
+FROM nginx:1.29.3-alpine
 COPY --from=build /app/public /usr/share/nginx/html
 # Put configuration files in the correct places
 RUN rm /etc/nginx/conf.d/default.conf
