@@ -5,7 +5,7 @@ backend:
 
 ingress:
   tlsSecretName: wini-gasthaus-website
-  clusterIssuer: k3s-cert-manager-prod
+  clusterIssuer: letsencrypt-prod
   hosts:
     - gasthaus-wini.com
     - www.gasthaus-wini.com
