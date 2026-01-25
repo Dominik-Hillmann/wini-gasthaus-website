@@ -5,6 +5,6 @@ backend:
 
 ingress:
   tlsSecretName: wini-gasthaus-website-test
-  clusterIssuer: letsencrypt-test
+  clusterIssuer: k3s-cert-manager-test
   hosts:
     - staging.gasthaus-wini.com
