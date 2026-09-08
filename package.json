@@ -3,6 +3,6 @@
     "tailwindcss": "4.3.3"
   },
   "dependencies": {
-    "postcss-cli": "^11.0.1"
+    "postcss-cli": "^12.0.0"
   }
 }
