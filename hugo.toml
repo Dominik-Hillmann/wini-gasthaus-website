@@ -11,7 +11,7 @@ defaultContentLanguageInSubdir = false
 
   mainSections = ['reviews']
   googleFonts = true
-  underConstructionBanner = false
+  underConstructionBanner = true
 
   [params.logo]
     main = "/img/logo-gasthaus-wini.png"
